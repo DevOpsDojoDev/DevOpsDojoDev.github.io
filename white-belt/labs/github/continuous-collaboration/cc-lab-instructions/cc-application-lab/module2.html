@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <script type="text/javascript">
+    !function(T,l,y){var S=T.location,u="script",k="instrumentationKey",D="ingestionendpoint",C="disableExceptionTracking",E="ai.device.",I="toLowerCase",b="crossOrigin",w="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"4",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[I](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,p,l,u;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][I]()]=i[1])}if(!e[D]){var r=e.endpointsuffix,o=r?e.location:null;e[D]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[k]||d[k]||"",p=s[D],l=p?p+"/v2/track":config.endpointUrl,(u=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=l,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),u.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,l)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:w,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(w,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(u,l))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(u);n.src=h;var e=y[b];return!e&&""!==e||"undefined"==n[b]||(n[b]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(u)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[C]&&!0!==s[C]){method="onerror",t(["_"+method]);var c=T[method];T[method]=function(e,t,n,a,i){var r=c&&c(e,t,n,a,i);return!0!==r&&m["_"+method]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);(T[t]=n).queue&&0===n.queue.length&&n.trackPageView({})}(window,document,{
+    src: "https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",
+    cfg: {
+        instrumentationKey: "b0b411e6-3e51-4578-b762-608bb183d4a6"
+    }});
+    var telemetryInitializer = (envelope) => {
+      envelope.data.someField = 'This item passed through my telemetry initializer';
+    };
+    appInsights.addTelemetryInitializer(telemetryInitializer);
+    appInsights.trackTrace({message: 'This message will use a telemetry initializer'});
+    var id = null;
+    fetch('/.auth/me').then(function(response){
+      return response.json();
+    }).then(function(data){
+      id = data[0].user_id;
+      appInsights.setAuthenticatedUserContext(id);
+    });
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Module 2: GitHub with Azure DevOps | DevOps Dojo </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Module 2: GitHub with Azure DevOps | DevOps Dojo ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../../../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../../../toc.html">
+  
+  
+  
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../../../index.html">
+                <div class="msft-logo"></div>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p><strong><a href="../index.html">Home</a> | <a href="module1.html">Module 1</a> | <a href="module2.html">Module 2</a> |</strong></p>
+<h1 id="module-2-github-with-azure-devops"><strong>Module 2: GitHub with Azure DevOps</strong></h1>
+<hr>
+<p><strong><a href="https://github.com/MicrosoftDocs/azure-devops-docs/blob/master/docs/user-guide/what-is-azure-devops.md#what-is-azure-devops">Azure DevOps</a></strong> provides developer services for support teams to plan work, collaborate on code development, and build and deploy applications. <strong>Azure Boards</strong> delivers a suite of Agile tools to support planning and tracking work, code defects, and issues using Kanban and Scrum methods.</p>
+<p>By connecting <a href="https://docs.microsoft.com/en-us/azure/devops/boards/github/?view=azure-devops">Azure Boards with GitHub repositories</a>, you enable linking between GitHub commits, pull requests, and issues to work items. You can use GitHub for software development while using Azure Boards to plan and track your work. Azure Boards provides the scalability to grow as your organization and business needs grow.</p>
+<p>This module will provide an understanding of:</p>
+<ul>
+<li>How to effectively <strong>configure ADO Boards againts a GitHub repository</strong>, to better plan and track progress of the team's work.</li>
+<li>How to <strong><a href="https://docs.microsoft.com/en-us/azure/devops/boards/integrations/boards-teams?view=azure-devops#:%7E:text=If%20you%20use%20Microsoft%20Teams%2C%20you%20can%20use,updating%20work%20items%20Manage%20other%20work%20item%20events">configure Azure Boards app</a> in the Microsoft Teams collaboration channel</strong> to create work items and monitor the activity from Teams.</li>
+</ul>
+<h2 id="exercise-1-github-repository---ado-boards">Exercise 1: GitHub repository - ADO Boards</h2>
+<hr>
+<p><a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects">GitHub projects</a> feature has recently been evolved with new capabilities like <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-tasklists">issue hierarchy</a> and <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/customizing-the-roadmap-layout">project roadmaps</a>. Make sure you review them to understand how continuous planning can be handled with GitHub. In this labs, because there are some hybrid scenarios where ADO and GitHub co-exist, we are leveraging ADO Boards for <a href="../../../../capabilities/continuous-planning/index.md">Continuous Planning</a>. However, it is important to keep track of any commits and pull requests related to a specific User Story. This is why, we need to configure our GitHub repository against our Azure DevOps Board.</p>
+<p>To complete this exercise, you will connect your GitHub Repository against your Azure DevOps project, so changes in the code can be linked to existing work items.</p>
+<h3 id="prerequisites---exercise-1">Prerequisites - Exercise 1</h3>
+<hr>
+<ul>
+<li>An Azure Boards or Azure DevOps project needs to exist.</li>
+<li>Project Administrators and project's Contributors group memberships are required in the ADO project.</li>
+<li>GitHub repository owner role is required in the Coupons repository.</li>
+</ul>
+<hr>
+<ol>
+<li><p>Open the <strong>Azure DevOps Project</strong>.</p>
+</li>
+<li><p>Go to <strong>Project settings</strong> &gt; <strong>Github connections</strong> &gt; <strong>Connect your Github account</strong>.</p>
+</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+</div>
+<pre><code>&gt; For &quot;Connect your GitHub account&quot; option to be visible you need to have admin rights on the ADO project.
+
+![Open ADO GitHub connections](../../media/ADO-github-connection.png)
+</code></pre>
+<ol start="3">
+<li><p>Connect with your GitHub credentials. If this is your first time connecting to GitHub from Azure Boards, you will be asked to sign in using your GitHub credentials. Choose an account for which you are an administrator for the repositories you want to connect to. If you have enabled two-factor authentication, enter the authentication code that GitHub sent you and choose Verify.</p>
+</li>
+<li><p>Select the GitHub organization.</p>
+</li>
+<li><p>Select the Coupons repository from the drop down list and click <strong>save</strong>.</p>
+<p><img src="../../media/GitHubConnection.gif" alt="Configure GitHub Connection"></p>
+</li>
+<li><p>Review the GitHub page that displays and then choose <strong>Approve &amp; Install</strong>.</p>
+<p><img src="../../media/github-conection-page.png" alt="GitHub connection configuration page"></p>
+</li>
+<li><p>Provide your GitHub password to confirm if required.</p>
+</li>
+<li><p>When done, you should see the new connection with the selected repositories listed.</p>
+<p><img src="../../media/github-connection-created.png" alt="GitHub connection created"></p>
+</li>
+<li><p>Going back into the GitHub repository, click on <strong>settings</strong> &gt; <strong>integrations</strong>. You should see Azure Boards included as an installed GitHub app.</p>
+</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>In further labs (CI/CD/CQ/CS/CO) we will see how to link commits and pull requests to a specific work item created in Azure DevOps board. Stay tuned for amazing integrations 🚀!</p>
+</div>
+<h2 id="exercise-2-microsoft-teams---ado-boards-app">Exercise 2: Microsoft Teams - ADO Boards App</h2>
+<hr>
+<p>If you use <a href="https://www.microsoft.com/es-es/microsoft-teams/group-chat-software?rtc=1">Microsoft Teams</a>, you can create work items and monitor work item activity in your Azure Boards project from your Teams channel. You accomplish this by adding the <a href="https://appsource.microsoft.com/en-US/product/office/wa200000644?tab=overview">Azure Boards app</a> for Microsoft Teams to your Teams channel.</p>
+<p>The Azure Boards app for Microsoft Teams enables users to perform the following tasks:</p>
+<ul>
+<li>Set up and manage subscriptions for creating and updating work items</li>
+<li>Manage other work item events</li>
+<li>Receive and manage notifications for work item events in their Teams channel</li>
+<li>Create work items from conversations in the channel</li>
+<li>Search and share work items with other members in the channel using the messaging extension</li>
+<li>View work item previews from their URLs to initiate discussions and keep the conversations contextual.</li>
+</ul>
+<p>To complete this exercise, you will install the Azure Boards App in one of your channels and configure it to receive notifications your Azure board.</p>
+<h3 id="prerequisites---exercise-2">Prerequisites - Exercise 2</h3>
+<hr>
+<ul>
+<li>Microsoft Teams must be installed.</li>
+<li>A team must be created for this lab, with 1 channel to receive ADO Boards notifications.</li>
+</ul>
+<hr>
+<ol>
+<li><p>Open the <strong>Microsoft Teams</strong> application.</p>
+</li>
+<li><p>From your Apps, search <strong>Azure Boards</strong>.</p>
+</li>
+<li><p>Select <strong>Azure Boards App</strong> published by Microsoft Corporation.</p>
+</li>
+<li><p>To add this into the channel which you created in the prerequisites, click on the down arrow and select <strong>Add to a team</strong>.</p>
+</li>
+<li><p>Search for the channel name (Depending on the team you are in, for e.g. If you are in Team A, configure this is Team-a channel), and select <strong>Set up a bot</strong>.</p>
+<p><img src="../../media/setup_azure_boards_app.gif" alt="Setup Azure Boards App in Microsoft Teams"></p>
+</li>
+<li><p>Lets configure the Azure Boards app to receive notifications from a particular GitHub repository. To ensure the Teams <code>Azure Boards</code> application can connecto to ADO, ensure the ADO organisation policy should be configured to allows 3rd party application access via OAuth. You can check this in <code>organization settings -&gt; policies</code>.</p>
+<p><img src="../../media/ado-policy.png" alt="ADO policy"></p>
+</li>
+<li><p>Type the following command in the channel conversation: <code>@Azure Boards signin</code>. If not already logged in, provide your Microsoft credentials.</p>
+</li>
+<li><p>Type <code>@Azure Boards subscriptions</code>. Channel shouldn't be linked to any ADO project. Link it to the ADO project by typing <code>@Azure Boards link https://dev.azure.com/{org_name}/{project_name}</code></p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>If you see the <strong>Configuration failed. Please make sure that the organization '{organization name}' exists and that you have sufficient permissions</strong> please follow <a href="https://learn.microsoft.com/en-us/azure/devops/boards/integrations/boards-teams?view=azure-devops#configuration-failed-please-make-sure-that-the-organization-organization-name-exists-and-that-you-have-sufficient-permissions">this instructions</a> to make sure you have the right tenant configure for your account.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Depending on your setup and the team you are in, enter appropriate org_name &amp; project_name. This can be found in technology section.</p>
+</div>
+<p><img src="../../media/link_azure_boards_app1.gif" alt="Setup to Azure Boards subscription"></p>
+</li>
+<li><p>Click on the <strong>Add subscription</strong> button. Select <strong>Work item created</strong> from the dropdown many and then choose your team's are path and click submit. Repeat this operation for <strong>Work item deleted</strong> and <strong>Work item updated</strong>.</p>
+<p><img src="../../media/link_azure_boards_app2.gif" alt="Setup to Azure Boards subscription"></p>
+</li>
+<li><p>Now whenever an update is made to a work item, that will be notified directly in this teams channel. Thus teams can start discussions based on these notifications and take actions right away. An example is shown below:</p>
+<p><img src="../../media/teams_ado_pbi.png" alt="Example of Azure Boards app notifying about a new work item in ADO"></p>
+</li>
+<li><p>You will see this in action as we start using GitHub in <a href="../../continuous-planning/index.md">Continuous Planning Lab</a>, and at the time of creating new work items, notification will pop in this teams channel notifying the members about the work item and any updates. So stay tuned, a lot to learn and experience along the way.</p>
+</li>
+</ol>
+<h1 id="key-takeaways"><strong>Key Takeaways</strong></h1>
+<hr>
+<ul>
+<li>GitHub repositories can be linked to Azure DevOps Boards, taking advantage of all the Continuous Planning functionalities of ADO, by using GitHub connections.</li>
+<li>Azure DevOps Boards can be connected with Microsoft Teams channel using Azure Boards App, so that notifications about various actions like new/updated/deleted work items, directly into the teams channel.</li>
+</ul>
+<hr>
+<h2 id="whats-next-">What's Next ?</h2>
+<hr>
+<p><a href="../../../continuous-planning/index.html">Continuous Planning</a></p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="w-100 py-2">
+          <div class="container my-2">
+              <div class="hacker white"></div>
+              <div class="hacker orange"></div>
+              <div class="hacker green"></div>
+              <div class="hacker black"></div>
+              <div class="dojo-teams hidden-xs hidden-sm"></div>
+          </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/main.js"></script>
+  </body>
+</html>

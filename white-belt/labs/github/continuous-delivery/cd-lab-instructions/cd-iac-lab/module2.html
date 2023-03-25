@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <script type="text/javascript">
+    !function(T,l,y){var S=T.location,u="script",k="instrumentationKey",D="ingestionendpoint",C="disableExceptionTracking",E="ai.device.",I="toLowerCase",b="crossOrigin",w="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"4",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[I](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,p,l,u;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][I]()]=i[1])}if(!e[D]){var r=e.endpointsuffix,o=r?e.location:null;e[D]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[k]||d[k]||"",p=s[D],l=p?p+"/v2/track":config.endpointUrl,(u=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=l,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),u.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,l)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:w,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(w,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(u,l))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(u);n.src=h;var e=y[b];return!e&&""!==e||"undefined"==n[b]||(n[b]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(u)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[C]&&!0!==s[C]){method="onerror",t(["_"+method]);var c=T[method];T[method]=function(e,t,n,a,i){var r=c&&c(e,t,n,a,i);return!0!==r&&m["_"+method]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);(T[t]=n).queue&&0===n.queue.length&&n.trackPageView({})}(window,document,{
+    src: "https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",
+    cfg: {
+        instrumentationKey: "b0b411e6-3e51-4578-b762-608bb183d4a6"
+    }});
+    var telemetryInitializer = (envelope) => {
+      envelope.data.someField = 'This item passed through my telemetry initializer';
+    };
+    appInsights.addTelemetryInitializer(telemetryInitializer);
+    appInsights.trackTrace({message: 'This message will use a telemetry initializer'});
+    var id = null;
+    fetch('/.auth/me').then(function(response){
+      return response.json();
+    }).then(function(data){
+      id = data[0].user_id;
+      appInsights.setAuthenticatedUserContext(id);
+    });
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Module 2: Configure IAC Workflow - Terraform | DevOps Dojo </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Module 2: Configure IAC Workflow - Terraform | DevOps Dojo ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../../../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../../../toc.html">
+  
+  
+  
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../../../index.html">
+                <div class="msft-logo"></div>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p><strong><a href="index.html">Home</a> | <a href="module1.html">Module 1</a> | <a href="module2.html">Module 2</a></strong></p>
+<h1 id="module-2-configure-iac-workflow---terraform"><strong>Module 2: Configure IAC Workflow - Terraform</strong></h1>
+<hr>
+<h2 id="using-terraform-action">Using Terraform action</h2>
+<p>The <code>hashicorp/setup-terraform</code> action is a JavaScript action that sets up Terraform CLI in your GitHub Actions workflow by:</p>
+<ul>
+<li>Downloading a specific version of Terraform CLI and adding it to the <code>PATH</code>.</li>
+<li>Configuring the <a href="https://www.terraform.io/docs/commands/cli-config.html">Terraform CLI configuration file</a> with a Terraform Cloud/Enterprise hostname and API token.</li>
+<li>Installing a wrapper script to wrap subsequent calls of the <code>terraform</code> binary and expose its STDOUT, STDERR, and exit code as outputs named <code>stdout</code>, <code>stderr</code>, and <code>exitcode</code> respectively. (This can be optionally skipped if subsequent steps in the same job do not need to access the results of Terraform commands.)</li>
+</ul>
+<p>After you've used the action, subsequent steps in the same job can run arbitrary Terraform commands using <a href="https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsrun">the GitHub Actions <code>run</code> syntax</a>. This allows most Terraform commands to work exactly like they do on your local command line.</p>
+<h2 id="usage">Usage</h2>
+<p>This action can be run on <code>ubuntu-latest</code>, <code>windows-latest</code>, and <code>macos-latest</code> GitHub Actions runners. When running on <code>windows-latest</code> the shell should be set to Bash.</p>
+<p>The default configuration installs the latest version of Terraform CLI and installs the wrapper script to wrap subsequent calls to the <code>terraform</code> binary.</p>
+<pre><code class="lang-yaml">steps:
+- uses: hashicorp/setup-terraform@v1
+</code></pre>
+<p>A specific version of Terraform CLI can be installed.</p>
+<pre><code class="lang-yaml">steps:
+- uses: hashicorp/setup-terraform@v1
+  with:
+    terraform_version: 0.12.25
+</code></pre>
+<h2 id="exercise-1-configure-authentication-between-github-actions-and-your-azure-subscription">Exercise 1: Configure authentication between GitHub Actions and your Azure subscription</h2>
+<hr>
+<h2 id="azure-provider-authenticating-using-a-service-principal-with-a-client-secret">Azure Provider: Authenticating using a Service Principal with a Client Secret</h2>
+<p>Terraform supports a number of different methods for authenticating to Azure:</p>
+<ul>
+<li><a href="https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/azure_cli#important-notes-about-authenticating-using-the-azure-cli">Authenticating to Azure using the Azure CLI</a></li>
+<li><a href="https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/managed_service_identity">Authenticating to Azure using Managed Service Identity</a></li>
+<li><a href="https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_certificate">Authenticating to Azure using a Service Principal and a Client Certificate</a></li>
+<li>Authenticating to Azure using a Service Principal and a Client Secret (which is covered in this guide)</li>
+</ul>
+<hr>
+<p>We recommend using either a Service Principal or Managed Service Identity when running Terraform non-interactively (such as when running Terraform in a CI server) - and authenticating using the Azure CLI when running Terraform locally.</p>
+<h3 id="creating-a-service-principal">Creating a Service Principal</h3>
+<p>A Service Principal is an application within Azure Active Directory whose authentication tokens can be used as the <code>client_id</code>, <code>client_secret</code>, and <code>tenant_id</code> fields needed by Terraform (<code>subscription_id</code> can be independently recovered from your Azure account details).</p>
+<p>It's possible to complete this task in either the <a href="#creating-a-service-principal-using-the-azure-cli">Azure CLI</a> or in the <a href="#creating-a-service-principal-in-the-azure-portal">Azure Portal</a> - in both we'll create a Service Principal which has <code>Contributor</code> rights to the subscription. <a href="https://azure.microsoft.com/en-gb/documentation/articles/role-based-access-built-in-roles/">It's also possible to assign other rights</a> depending on your configuration.</p>
+<h3 id="creating-a-service-principal-using-the-azure-cli">Creating a Service Principal using the Azure CLI</h3>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you're using the <strong>China</strong>, <strong>German</strong> or <strong>Government</strong> Azure Clouds - you'll need to first configure the Azure CLI to work with that Cloud.  You can do this by running:</p>
+</div>
+<pre><code class="lang-shell">$ az cloud set --name AzureChinaCloud|AzureGermanCloud|AzureUSGovernment
+</code></pre>
+<hr>
+<p>Firstly, login to the Azure CLI using:</p>
+<pre><code class="lang-shell">$ az login
+</code></pre>
+<p>Once logged in - it's possible to list the Subscriptions associated with the account via:</p>
+<pre><code class="lang-shell">$ az account list
+</code></pre>
+<p>The output (similar to below) will display one or more Subscriptions - with the <code>id</code> field being the <code>subscription_id</code> field referenced above.</p>
+<pre><code class="lang-json">[
+  {
+    &quot;cloudName&quot;: &quot;AzureCloud&quot;,
+    &quot;id&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,
+    &quot;isDefault&quot;: true,
+    &quot;name&quot;: &quot;PAYG Subscription&quot;,
+    &quot;state&quot;: &quot;Enabled&quot;,
+    &quot;tenantId&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,
+    &quot;user&quot;: {
+      &quot;name&quot;: &quot;user@example.com&quot;,
+      &quot;type&quot;: &quot;user&quot;
+    }
+  }
+]
+</code></pre>
+<p>Should you have more than one Subscription, you can specify the Subscription to use via the following command:</p>
+<pre><code class="lang-shell">$ az account set --subscription=&quot;SUBSCRIPTION_ID&quot;
+</code></pre>
+<p>We can now create the Service Principal which will have permissions to manage resources in the specified Subscription using the following command:</p>
+<pre><code class="lang-shell">$ az ad sp create-for-rbac --role=&quot;Contributor&quot; --scopes=&quot;/subscriptions/SUBSCRIPTION_ID&quot;
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You need to be owner of such subscription in order to successfully execute the command.</p>
+</div>
+<p>This command will output 5 values:</p>
+<pre><code class="lang-json">{
+  &quot;appId&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,
+  &quot;displayName&quot;: &quot;azure-cli-2017-06-05-10-41-15&quot;,
+  &quot;name&quot;: &quot;http://azure-cli-2017-06-05-10-41-15&quot;,
+  &quot;password&quot;: &quot;0000-0000-0000-0000-000000000000&quot;,
+  &quot;tenant&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;
+}
+</code></pre>
+<p>These values map to the Terraform variables like so:</p>
+<ul>
+<li><code>appId</code> is the <code>client_id</code> defined above.</li>
+<li><code>password</code> is the <code>client_secret</code> defined above.</li>
+<li><code>tenant</code> is the <code>tenant_id</code> defined above.</li>
+</ul>
+<hr>
+<p>Copy the JSON output and store it as a GitHub secret within your GitHub repository. To do this, from your GitHub repository, select the Settings tab and then select Secrets from the left menu.</p>
+<p>Enter the following values and then select Add secret:</p>
+<ol>
+<li>Name: Enter CLIENTID.</li>
+<li>Value: Paste the Value of Appid that you copied earlier.</li>
+</ol>
+<p><img src="../../media/app.PNG" alt="APPid"></p>
+<ol>
+<li>Name: Enter CLIENTSECRET.</li>
+<li>Value: Paste the Value of password that you copied earlier.</li>
+</ol>
+<p><img src="../../media/app1.PNG" alt="APPid"></p>
+<ol>
+<li>Name: Enter TENANTID.</li>
+<li>Value: Paste the Value of tenantid that you copied earlier.</li>
+</ol>
+<p><img src="../../media/app2.PNG" alt="APPid"></p>
+<p>This is the information that you'll need to specify the authentication in the workflow.</p>
+<h2 id="exercise-2-update-and-verify-terraform-template-file-in-the-repo">Exercise 2: Update and Verify Terraform template file in the repo</h2>
+<hr>
+<ol>
+<li><p>Go to the IAC repository in Github and open the GitHub Codespaces if you have one already created. If not, go ahead and select <code>+ New codespace</code>.</p>
+</li>
+<li><p>Create a new branch following the <code>users/{user_alias}/{purpose_of_the_branch}</code> schema.</p>
+</li>
+<li><p>Navigate to <code>mgr-sh360-infrastructure-template/Terraform-templates/Resource-group</code> folder. This folder contains the terraform template that the workflow will utilize to deploy infrastructure to Azure.</p>
+<p><img src="../../media/app3.PNG" alt="template"></p>
+</li>
+<li><p>The file <code>main.tf</code> is the template file responsible for deploying resource group. Go to <code>terraform.tfvars</code>, and the update the name of resource group to {cus_prefix}-Dojo-terraform-prd-{team_suffix}.</p>
+</li>
+</ol>
+<h2 id="exercise-3-work-with-workflow-file-to-trigger-the-action">Exercise 3: Work with WorkFlow File to trigger the action</h2>
+<hr>
+<ol>
+<li><p>The workflow files are stored in the .github/workflows folder at the root of your repository. The workflow file extension can be either .yml or .yaml.</p>
+</li>
+<li><p>The core Terraform workflow has three steps:</p>
+<p>Write - Author infrastructure as code.
+Plan - Preview changes before applying.
+Apply - Provision reproducible infrastructure.</p>
+</li>
+<li><p>We will create two workflow file for Plan and Apply</p>
+</li>
+<li><p>Navigate to <code>mgr-sh360-infrastructure-template/.github/workflows/terraform-plan.yml</code> file and take a note of how every action is constructed to deploy the templates.</p>
+</li>
+<li><p>A workflow file, starts with defining its name, which in our case is <strong>Terraform Plan to Azure</strong>. Next is the Triggers section called <strong>on</strong>, this section is responsible for listing down all the different ways this workflow is triggered. We have defined 3 ways here:</p>
+<ul>
+<li><p><strong>Push</strong>: This trigger ensures that whenever a new update is pushed in particular branches this build workflow must run. We have specified just the main branch, thus only when the main branch has some updates pushed the build pipeline is expected to run.</p>
+</li>
+<li><p><strong>Pull Request</strong>: This trigger ensures that whenever a PR is raised against a particular branch, the build pipeline is run as a verification run. We have specified just the main branch, thus only when a PR is raised against the main branch, the build pipeline is expected to run.</p>
+</li>
+<li><p><strong>Workflow Dispatch</strong>: This option is used for manually triggering the workflow.</p>
+</li>
+</ul>
+</li>
+<li><p>Uncomment the <strong>push and pull request section</strong> in the triggers, to let the workflow trigger automatically on a push or PR to the main branch.</p>
+</li>
+<li><p>Edit the value of <code>ARM_SUBSCRIPTION_ID</code> under the environment variables to the subscription id as per your environment configuration.</p>
+</li>
+<li><p>The last task of this workflow <code>Terraform Plan</code> is used to preview changes that will take effect when ran. This task is currently disabled, to enable this removed the if: {{ false }} from the action.</p>
+</li>
+<li><p>Perform the above steps 5-8 for the <code>mgr-sh360-infrastructure-template/.github/workflows/terraform-apply.yml</code> workflow as well.</p>
+<p><img src="../../media/iac_terraform_changes.gif" alt="Terraform changes"></p>
+</li>
+<li><p>After having done all the changes. Commit them and create a Pull Request. As part of the pull request check, the terraform Plan and Apply workflows will be triggered. Once the pull requests is approved and checks have been passed, you can merge the changes into the main-base branch.</p>
+</li>
+<li><p>As part of this merge, the Terraform IAC workflow will be triggered again. If successfully executed, Monitor the progress of the workflow by checking the Components are created.</p>
+<p><img src="../../media/app5.PNG" alt="Deployment"></p>
+</li>
+</ol>
+<h1 id="key-takeaways"><strong>Key takeaways</strong></h1>
+<hr>
+<ul>
+<li>Learning GitHub Workflow and Actions.</li>
+<li>Deploy terraform templates using Github Actions</li>
+<li>Understanding the Azure Resources and Automation using terraform</li>
+</ul>
+<hr>
+<h2 id="whats-next-">What's Next ?</h2>
+<hr>
+<p><a href="../cd-application-lab/index.html">Continuous Delivery</a></p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="w-100 py-2">
+          <div class="container my-2">
+              <div class="hacker white"></div>
+              <div class="hacker orange"></div>
+              <div class="hacker green"></div>
+              <div class="hacker black"></div>
+              <div class="dojo-teams hidden-xs hidden-sm"></div>
+          </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3090 @@
+{
+  "homepages": [],
+  "source_base_path": "/Users/igwejk/Projects/github/DevOps-Dojo/devops-dojo-docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "NRCpVbtYnv+IWv0WeB4ga2lmoPfdo6XTBzyJ0Ys4EMI="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/GitHub-Mark-64px.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/GitHub-Mark-64px.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/Microsoft_Teams_85x85.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/Microsoft_Teams_85x85.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/devops-cycle.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/devops-cycle.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/devops-dojo-assets.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/devops-dojo-assets.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/devops-dojo-belts-logo-80.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/devops-dojo-belts-logo-80.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/devops-dojo-belts.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "media/devops-dojo-belts.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/devops-dojo-belts.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/devops-dojo-belts.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/devops-dojo-components.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "media/devops-dojo-components.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/devops-dojo-governance-model.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/devops-dojo-governance-model.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/devops-dojo-innersource-architecture.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/devops-dojo-innersource-architecture.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/devops-elephant.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/devops-elephant.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/devops-metrics-dora-2019.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/devops-metrics-dora-2019.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/devops-taxonomy.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/devops-taxonomy.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/dojo.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/dojo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/dora-2019-devops-practices.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/dora-2019-devops-practices.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/governance-models.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/governance-models.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/hackercat-devops-dojo-blackbelt-80.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/hackercat-devops-dojo-blackbelt-80.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/hackercat-devops-dojo-greenbelt-80.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/hackercat-devops-dojo-greenbelt-80.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/hackercat-devops-dojo-orangebelt-80.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/hackercat-devops-dojo-orangebelt-80.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/hackercat-devops-dojo-whitebelt-80.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/hackercat-devops-dojo-whitebelt-80.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/media/okr.png",
+      "output": {
+        "resource": {
+          "relative_path": "media/okr.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "mT5ydH2vmJGuj2cAVb9PTUzTkIHulNegA7SNR1aCg7I="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/index.html",
+          "hash": "qOrXiVJ7OvwUhgqHr06xYdTOz4dxsKdX+oFSj2TczHA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/cc-lab-instructions/cc-application-lab/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/cc-lab-instructions/cc-application-lab/index.html",
+          "hash": "cYDBw+6oO3HYfUrH1jKzoAqpS3r2dPiy0viqJpK+buM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/cc-lab-instructions/cc-application-lab/module1.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/cc-lab-instructions/cc-application-lab/module1.html",
+          "hash": "Lm7d2uZ13LrhU1qWpe7DEvSFVU45q4fEP4GAchfpjjE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/cc-lab-instructions/cc-application-lab/module2.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/cc-lab-instructions/cc-application-lab/module2.html",
+          "hash": "W2vTIvjstd4PlHCxYgzs2SgjG4aZ8jG+LgXWbbWMB30="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/cc-lab-instructions/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/cc-lab-instructions/index.html",
+          "hash": "SJqdY+F5G4lb94sbcxM7waxG64GJ/ugHJoVHKo1DSoo="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/index.html",
+          "hash": "FgPyhopLTGtplsQF2ttO66hj7U6O3HaBvOG0X8us8uc="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/media/ADO-github-connection.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/media/ADO-github-connection.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/media/CC.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/media/CC.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/media/GitHubConnection.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/media/GitHubConnection.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/media/ado-policy.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/media/ado-policy.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/media/github-conection-page.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/media/github-conection-page.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/media/github-connection-created.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/media/github-connection-created.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/media/link_azure_boards_app1.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/media/link_azure_boards_app1.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/media/link_azure_boards_app2.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/media/link_azure_boards_app2.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/media/setup_azure_boards_app.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/media/setup_azure_boards_app.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/media/setup_github_app.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/media/setup_github_app.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/media/subscribe_github_repo.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/media/subscribe_github_repo.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/media/teams_ado_pbi.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/media/teams_ado_pbi.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/media/teams_github_commit.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/media/teams_github_commit.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-collaboration/media/teams_github_workflow_status.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-collaboration/media/teams_github_workflow_status.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/cd-lab-instructions/cd-application-lab/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/cd-lab-instructions/cd-application-lab/index.html",
+          "hash": "6Jr6iC/XH6lC+Lkkuax0eXheF++/YJzbGt4KacOa/k0="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/cd-lab-instructions/cd-application-lab/module1-old.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/cd-lab-instructions/cd-application-lab/module1-old.html",
+          "hash": "fiymlxBViylbwC4AaJ8cm9bix/wymC+Imh0dT12MekE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/cd-lab-instructions/cd-application-lab/module1.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/cd-lab-instructions/cd-application-lab/module1.html",
+          "hash": "/4ctGCXYswy5vnQgtafxHmPwj6FkDK/ogbP2uEi2v18="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/cd-lab-instructions/cd-iac-lab/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/cd-lab-instructions/cd-iac-lab/index.html",
+          "hash": "spDx/MGGO13CZobEckwa/ezU7ueIVTQPawcfszOuxmo="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/cd-lab-instructions/cd-iac-lab/module1.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/cd-lab-instructions/cd-iac-lab/module1.html",
+          "hash": "3VF2ifhWEQ8JNXFMXDXoPbeEwbKDBLGRNAQQAOye8sE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/cd-lab-instructions/cd-iac-lab/module2.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/cd-lab-instructions/cd-iac-lab/module2.html",
+          "hash": "H7cBMGDysUnBuYKsscvlgwY1wQVjDvjrpM6nv9sy9pk="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/cd-lab-instructions/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/cd-lab-instructions/index.html",
+          "hash": "OBd+/uZd0tLs4SVZpJ30rm8CEwf+JUsalnxBir60Jg0="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/cd-reference-branch.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/cd-reference-branch.html",
+          "hash": "OOsqV69AEHtuvioGtrY8ehWlP8Nrj64FB1NKSab610o="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/index.html",
+          "hash": "4iDaZ5ZqeMdER+B0j1YwE4szdhH+W5Pp8+7Ib3qVul8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/CD.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/CD.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/IAC.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/IAC.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/SP.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/SP.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/app.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/app.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/app1.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/app1.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/app2.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/app2.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/app3.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/app3.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/app4.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/app4.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/app5.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/app5.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/azure_webapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/azure_webapp.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/bookings-reference-branch-workflow.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/bookings-reference-branch-workflow.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/bookings-reference-branch.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/bookings-reference-branch.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/composite-actions.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/composite-actions.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/coupons-reference-branch-workflow.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/coupons-reference-branch-workflow.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/coupons-reference-branch-workflow2.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/coupons-reference-branch-workflow2.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/coupons-reference-branch.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/coupons-reference-branch.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/coupons-reference-branch2.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/coupons-reference-branch2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/create_github_deployment.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/create_github_deployment.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/create_github_deployment2.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/create_github_deployment2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/deployment-bookings.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/deployment-bookings.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/deployment-coupons.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/deployment-coupons.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/deployment.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/deployment.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/deployment_complete.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/deployment_complete.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/environments-diagram.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/environments-diagram.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/environments.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/environments.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/github-codespaces.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/github-codespaces.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/github-environments.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/github-environments.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/github-environments2.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/github-environments2.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/iac_terraform_changes.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/iac_terraform_changes.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/landing_zone_changes.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/landing_zone_changes.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/on_section.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/on_section.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/overview-actions-simple.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/overview-actions-simple.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/release_stage.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/release_stage.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/release_to_next_env.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/release_to_next_env.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/repository_environments.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/repository_environments.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/secret.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/secret.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/spn-creation.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/spn-creation.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/tasks.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/tasks.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/teams_card.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/teams_card.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/trigger_release.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/trigger_release.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/update_deployment.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/update_deployment.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/var1.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/var1.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/var2.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/var2.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/var3.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/var3.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/var4.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/var4.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/var5.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/var5.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/var6.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/var6.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/workflow-dispatch.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/workflow-dispatch.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-delivery/media/workflow_dispatch.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-delivery/media/workflow_dispatch.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/cv-lab-instructions/cv-application-lab/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/cv-lab-instructions/cv-application-lab/index.html",
+          "hash": "CwrT/zJo3bWa71MfKNyV6J0yAjHG4pu2enzqT96Ot5Y="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/cv-lab-instructions/cv-application-lab/module1.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/cv-lab-instructions/cv-application-lab/module1.html",
+          "hash": "lNRCyCGvVzyad3gYWBgB8L0QJJjKySumLfbV9ScUQM8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/cv-lab-instructions/cv-application-lab/module2.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/cv-lab-instructions/cv-application-lab/module2.html",
+          "hash": "ssGduVYcWxnG7RAiGBgyO90UWuuPWJ79r+YuKsOx7Dc="
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/cv-lab-instructions/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/cv-lab-instructions/index.html",
+          "hash": "4QWKnyGjuMsRtfm279QflTeB3p2m8sjvF4lyKMSf+i8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/index.html",
+          "hash": "Rgj1hHM+LdqqvT899Pwnx4/ZSVqSUYNISgjsJypTW90="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/media/CV.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/media/CV.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/media/Grafana-Architecture.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/media/Grafana-Architecture.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/media/Grafana-Change-Failure-Rate.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/media/Grafana-Change-Failure-Rate.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/media/Grafana-Deployment-Frequency.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/media/Grafana-Deployment-Frequency.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/media/Grafana-Lead-Time.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/media/Grafana-Lead-Time.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/media/Grafana-MTTR.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/media/Grafana-MTTR.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/media/Grafana-Overview.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/media/Grafana-Overview.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/media/Grafana-Pull-Request.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/media/Grafana-Pull-Request.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/media/MCS-Cred.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/media/MCS-Cred.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/media/install.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/media/install.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-improvement/media/signin.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-improvement/media/signin.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-bookings-lab/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-bookings-lab/index.html",
+          "hash": "chrMTieJCM6c7Y6G3RN5Y2OhH8VR5HOhKCQIxwVZGQI="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-bookings-lab/module1.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-bookings-lab/module1.html",
+          "hash": "RvFjSIMOAHjh3KJv8C6Vr6F2nxT6rkaVa6/0b+No+qk="
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-bookings-lab/module2.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-bookings-lab/module2.html",
+          "hash": "tnB/v/3cROfDnFO42aL3m8t4nOMnKMS4S4Dlt+9K1HY="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-bookings-lab/module3.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-bookings-lab/module3.html",
+          "hash": "JGpg4ZcM6ECkFvEFs01k+/uBCZDv+u45LXbOBoIp8oA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-bookings-lab/module4.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-bookings-lab/module4.html",
+          "hash": "Q6dNt793kZXKAHFh4WH8OgmP2VTj+44WWvONKjs3GDE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-coupons-lab/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-coupons-lab/index.html",
+          "hash": "Q5/R38C7hyGgh+MPOcv+6whmbVAimc7UAj6E+qox2hs="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-coupons-lab/module1.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-coupons-lab/module1.html",
+          "hash": "5+CNOwWqGuzZeOjsxG6+BYXGm2m8QhObd8pMXKw81T0="
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-coupons-lab/module2.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-coupons-lab/module2.html",
+          "hash": "rnsCH9w8fcqGN6kfvruLG3UDgkrC+CME24yJj9Js67w="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-coupons-lab/module3.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-coupons-lab/module3.html",
+          "hash": "lcUf0fn5QFA+Of1WMszA3Xr/Aelb5PMuxHKS2gnyUJI="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-coupons-lab/module4.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-integration/ci-lab-instructions/ci-coupons-lab/module4.html",
+          "hash": "yA1AzEWfeD0MFhG7Lee7I9Pt+zwaTyO+KavB5/boiQ4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/ci-lab-instructions/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-integration/ci-lab-instructions/index.html",
+          "hash": "+eMpJFTNZn2PonVwJ0LSEAZA23cATX3HAGOXxYHwUjc="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/ci-reference-branch.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-integration/ci-reference-branch.html",
+          "hash": "7xuxl9flrdZ8iU0YQLZZZuMfSS7RrOhmRlqV+lWl0go="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-integration/index.html",
+          "hash": "RkMHWIsK3uEnJyLQmd1U5ckE/xLxXMe3X8s8hKHo8hY="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/CI.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/CI.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/add_ip_address.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/add_ip_address.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/bookings-reference-branch-workflow.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/bookings-reference-branch-workflow.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/bookings-reference-branch.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/bookings-reference-branch.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/ci_bookings_workflow_changes.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/ci_bookings_workflow_changes.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/ci_workflow_changes.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/ci_workflow_changes.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/clone_repository.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/clone_repository.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/code_analysis_fix.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/code_analysis_fix.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/codeql_example_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/codeql_example_1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/codeql_example_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/codeql_example_2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/codeql_setup.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/codeql_setup.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/codeql_setup2.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/codeql_setup2.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/codeql_setup_bookings.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/codeql_setup_bookings.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/codeql_setup_bookings2.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/codeql_setup_bookings2.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/commit_and_push.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/commit_and_push.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/commit_push_changes.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/commit_push_changes.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/coupons-reference-branch-workflow.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/coupons-reference-branch-workflow.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/coupons-reference-branch-workflow2.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/coupons-reference-branch-workflow2.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/coupons-reference-branch.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/coupons-reference-branch.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/coupons_application_running.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/coupons_application_running.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/create_new_branch.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/create_new_branch.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/create_new_branch_bookings.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/create_new_branch_bookings.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/create_pull_request.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/create_pull_request.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/create_pull_request_bookings.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/create_pull_request_bookings.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/create_regression_and_check_unit_tests_results.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/create_regression_and_check_unit_tests_results.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/dependabot_alert.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/dependabot_alert.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/dependabot_alert_PR.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/dependabot_alert_PR.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/dependabot_alert_PR_bookings.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/dependabot_alert_PR_bookings.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/dependabot_alert_bookings.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/dependabot_alert_bookings.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/dependency_graph.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/dependency_graph.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/dependency_graph_bookings.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/dependency_graph_bookings.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/enable_code_analysis_bookings.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/enable_code_analysis_bookings.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/enable_static_analysis.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/enable_static_analysis.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/github_secret_scanning_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/github_secret_scanning_example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/initialize_codespace.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/initialize_codespace.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/open_application_browser.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/open_application_browser.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/open_application_browser.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/open_application_browser.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/open_project_visual_studio.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/open_project_visual_studio.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/run_bookings_locally.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/run_bookings_locally.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/run_coupons_codespaces.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/run_coupons_codespaces.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/run_local_unit_test.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/run_local_unit_test.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/run_local_unit_test_bookings.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/run_local_unit_test_bookings.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/setup_branch_policies.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/setup_branch_policies.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/setup_branch_policies_bookings.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/setup_branch_policies_bookings.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/update_application_properties.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/update_application_properties.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/update_document_configuration.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/update_document_configuration.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-integration/media/update_web_config.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-integration/media/update_web_config.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/co-lab-instructions/co-application-lab/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-operations/co-lab-instructions/co-application-lab/index.html",
+          "hash": "fIxE9J/jJcWjlav4m9hMcy+ERM+G1UWrHvBS+qsEMU8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/co-lab-instructions/co-application-lab/module1.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-operations/co-lab-instructions/co-application-lab/module1.html",
+          "hash": "6vx8bLS49nAhC4Ft0XdTbz+8zqioyc2ChWc32d5E2wg="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/co-lab-instructions/co-application-lab/module2.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-operations/co-lab-instructions/co-application-lab/module2.html",
+          "hash": "7v5csKEfzT/0hzvW9kl/qN+uwTFy7eU7y2p6y3je39s="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/co-lab-instructions/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-operations/co-lab-instructions/index.html",
+          "hash": "8wImFfR2MdAf0O0mCV/VDopEsF+9hWRXzwAWOJGKmHo="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/co-reference-branch.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-operations/co-reference-branch.html",
+          "hash": "x2hls+3dkdovkg2zEd6oHHv3mmvi5CV0NYojKe4y2WM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-operations/index.html",
+          "hash": "HT1hLgP7+znqiZbMSgHyapSOX2akLy/RyoYVGGY7rlE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/CO-Flow-Diagram.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/CO-Flow-Diagram.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/CO-failed-check-availability.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/CO-failed-check-availability.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/CO-log-analytics.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/CO-log-analytics.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/CO-passed-check-availaibility.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/CO-passed-check-availaibility.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/CO-passed-check-availaibility2.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/CO-passed-check-availaibility2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/CO-passed-check-latency.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/CO-passed-check-latency.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/CO-passed-check-latency2.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/CO-passed-check-latency2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/CO.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/CO.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/Pull-request-raised.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/Pull-request-raised.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/Uncomment-Code-Block-3-output.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/Uncomment-Code-Block-3-output.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/Uncomment-Code-Block-3.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/Uncomment-Code-Block-3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/Uncomment-Code-Block-4-output.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/Uncomment-Code-Block-4-output.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/Uncomment-Code-Block-4.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/Uncomment-Code-Block-4.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/booking-cd-base.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/booking-cd-base.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/bookings-co-workflow-run.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/bookings-co-workflow-run.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/cd-success-qa.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/cd-success-qa.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/co-log-analytics-success.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/co-log-analytics-success.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/co-reference-branch.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/co-reference-branch.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/commit-changes.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/commit-changes.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/coupons-co-reference-branch.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/coupons-co-reference-branch.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/coupons-co-reference-branch2.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/coupons-co-reference-branch2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/coupons-reference-branch-workflow.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/coupons-reference-branch-workflow.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/coupons-reference-branch-workflow2.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/coupons-reference-branch-workflow2.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/create-pull-request.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/create-pull-request.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/fail-qa.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/fail-qa.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/fail-qa2.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/fail-qa2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/github-codespaces.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/github-codespaces.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/kickoff-required-pipelines.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/kickoff-required-pipelines.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/open-booking-cd-base.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/open-booking-cd-base.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/pass-qa.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/pass-qa.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-operations/media/pr-checks.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-operations/media/pr-checks.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-planning/cp-lab-instructions/cp-application-lab/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-planning/cp-lab-instructions/cp-application-lab/index.html",
+          "hash": "6qe16zWMz/hjLplKCBhDQg6prD4k1O77JT8NdSrjiuw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-planning/cp-lab-instructions/cp-application-lab/module1.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-planning/cp-lab-instructions/cp-application-lab/module1.html",
+          "hash": "jzPQpXWDj6o59X3fFAMQquz4Dp0P6CstYPAYUpab8Xk="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-planning/cp-lab-instructions/cp-application-lab/module2.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-planning/cp-lab-instructions/cp-application-lab/module2.html",
+          "hash": "UgOtRiP194yCS62imId0syKtdOdD7Icn4ZeeWbbW6sQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-planning/cp-lab-instructions/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-planning/cp-lab-instructions/index.html",
+          "hash": "njK1E1CXdx1l8dNAkKrqzP+YB4Pgk0Kav1DL9/arPZY="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-planning/cp-reference-branch.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-planning/cp-reference-branch.html",
+          "hash": "b3hRMmX/2eqpDuGPLTKlRjEUsB1xKpLTfTXfRNsFGn0="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-planning/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-planning/index.html",
+          "hash": "CfCWEoehH5weXlWHP2EkjRmNn77Bwh6iBnwKWFCwaa8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-planning/media/Add Tasks to backlog items.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-planning/media/Add Tasks to backlog items.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-planning/media/CP-configure-team-configuration.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-planning/media/CP-configure-team-configuration.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-planning/media/CP.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-planning/media/CP.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-planning/media/View Backlog in Azure.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-planning/media/View Backlog in Azure.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/cq-lab-instructions/cq-application-lab/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-quality/cq-lab-instructions/cq-application-lab/index.html",
+          "hash": "msFnpngmACc2zoEA5o716L10k/h1oy3PPu7s2JHaICQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/cq-lab-instructions/cq-application-lab/module1.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-quality/cq-lab-instructions/cq-application-lab/module1.html",
+          "hash": "XBkMG3769bMjV1VQOaHGAODPfdz6a7te3bRZbUJvGvU="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/cq-lab-instructions/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-quality/cq-lab-instructions/index.html",
+          "hash": "nVlOlVfKWBIiLZCZL7hGP9i1PfqjIT0+nerhMrjjJzw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/cq-reference-branch.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-quality/cq-reference-branch.html",
+          "hash": "g6yy4f05GY2hUNCGa3ixoXwhLY/TKHw4oATO/yqx3ro="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-quality/index.html",
+          "hash": "awoa40BNkcn+KHmEngClLU1rNWFFBbDzZTtZLtiRkV8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/ADO_bug.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/ADO_bug.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/BDD_issue.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/BDD_issue.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/CQ.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/CQ.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/bdd_stage_changes.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/bdd_stage_changes.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/bookings-reference-branch-workflow.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/bookings-reference-branch-workflow.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/bookings-reference-branch.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/bookings-reference-branch.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/coupons-reference-branch-workflow.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/coupons-reference-branch-workflow.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/coupons-reference-branch-workflow2.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/coupons-reference-branch-workflow2.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/coupons-reference-branch.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/coupons-reference-branch.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/coupons-reference-branch2.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/coupons-reference-branch2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/create_pull_request.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/create_pull_request.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/issue_creation.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/issue_creation.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/issue_workflow_changes.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/issue_workflow_changes.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/issues_creation_stage_changes.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/issues_creation_stage_changes.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/qa_execution.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/qa_execution.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/ui_stage_changes.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/ui_stage_changes.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/update_issue_stage_failure.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/update_issue_stage_failure.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/workflow_from_branch.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/workflow_from_branch.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-quality/media/workflow_from_branch2.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-quality/media/workflow_from_branch2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/cs-lab-instruction/cs-application-lab/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-security/cs-lab-instruction/cs-application-lab/index.html",
+          "hash": "3n7Ni1rO8DCY1JpNaZH6AGFu22QPAJ1FY/t3uShEK5o="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/cs-lab-instruction/cs-application-lab/module1.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-security/cs-lab-instruction/cs-application-lab/module1.html",
+          "hash": "IyAJtibMC1cdPCPijPFPCb2vVSBHd1ExiokVGMFQGlw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/cs-lab-instruction/cs-application-lab/module2.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-security/cs-lab-instruction/cs-application-lab/module2.html",
+          "hash": "ZfiIwrZ6gjD6fI3eXBpZb0ze7drjDHvpqoBE4D89F7Y="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/cs-lab-instruction/cs-application-lab/module3.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-security/cs-lab-instruction/cs-application-lab/module3.html",
+          "hash": "/xkOkEJpN0uDSVjvkwoaNvx1BUO88nfmw5DEcivZo5U="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/cs-lab-instruction/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-security/cs-lab-instruction/index.html",
+          "hash": "f5egtJsw/9r5N6WhrrNiVu75sno6Bpteo2xdiwz/MXk="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/cs-reference-branch.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-security/cs-reference-branch.html",
+          "hash": "3hhILXR+PWQ7CyAHYl8pSkR/cwYCVUuSob8FuQ5BzaE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/continuous-security/index.html",
+          "hash": "LN9kqiRs+KVbWXBkICkatvYhOAteg+r3793F7NQUc04="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/AzSK_Part1.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/AzSK_Part1.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/AzSk_Part2.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/AzSk_Part2.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/Bookings-reference-branch.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/Bookings-reference-branch.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/CS.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/CS.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/CS_labs_bookings_reference_branch.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/CS_labs_bookings_reference_branch.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/CodeQL-part-2.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/CodeQL-part-2.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/CodeQL-part3.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/CodeQL-part3.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/CodeQL_part1.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/CodeQL_part1.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/Coupons-reference-branch.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/Coupons-reference-branch.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/Coupons-reference-branch2.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/Coupons-reference-branch2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/MGR_CS_coupons.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/MGR_CS_coupons.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/MGR_CS_coupons2.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/MGR_CS_coupons2.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part1.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part1.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part2.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part2.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part3.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part3.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part4.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part4.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part5.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part5.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part6.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part6.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part7.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part7.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part8.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/github/continuous-security/media/OWASP_ZAP_Part8.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/getting-started.html",
+          "hash": "hM9R6YgjVqhl0sPb0pPoCQZWcM4O50Z1DhKkdGGYu24="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/github/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/github/index.html",
+          "hash": "nJ8ienj+N6R/kZbKa4Z97VVV/BugJ1I8upa0WM7+O0A="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/white-belt/labs/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/labs/index.html",
+          "hash": "AW1xLu7bL+drHO+flYH9/yM/nDjpxbDbwaeGBxkP/mA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/ado_pat.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/ado_pat.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/bookings_final_state.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/bookings_final_state.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/bootstrap_secret_list.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/bootstrap_secret_list.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/coupons-ci-workflow.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/coupons-ci-workflow.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/coupons_final_state.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/coupons_final_state.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/e2e-azure-devops.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/e2e-azure-devops.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/e2e-github.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/e2e-github.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/github_create_link.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/github_create_link.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/github_join_org.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/github_join_org.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/github_org_link_option.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/github_org_link_option.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/github_pat_sso.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/github_pat_sso.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/import_work_items_ado.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/import_work_items_ado.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/incoming_webhook_app.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/incoming_webhook_app.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/infra_final_state.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/infra_final_state.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/run_workflows.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/run_workflows.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/settings_tab.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/settings_tab.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/stop_workflow.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/stop_workflow.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/teams_create_webhook.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/teams_create_webhook.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/labs/media/update_org_details.gif",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/labs/media/update_org_details.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "docs/white-belt/media/white-belt-toc.png",
+      "output": {
+        "resource": {
+          "relative_path": "white-belt/media/white-belt-toc.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/white-belt/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "white-belt/toc.html",
+          "hash": "ouUxZEbRxwb++NLLu8uUUHCeDzp9rNEYw/k0zHM8SOk="
+        }
+      },
+      "version": ""
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

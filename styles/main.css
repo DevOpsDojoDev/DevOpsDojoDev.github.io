@@ -1,0 +1,205 @@
+.msft-logo {
+  margin: 15px;
+  padding: 15px;
+  width: 108px;
+  height: 23px;
+  background-size: contain;
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+}
+
+body {
+  font-family: Segoe UI, SegoeUI;
+  height: 100% !important;
+}
+
+.dojo-logo {
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  background-image: url("images/dojo.png");
+  background-repeat: no-repeat;
+}
+
+.sidetoc {
+  top: 300px !important;
+}
+
+.toc li.active {
+  color: darkslategray;
+}
+
+.dojo-teams {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  margin-left: auto;
+  height: 170px;
+  width: 394px;
+  background-size: contain;
+  background-image: url("images/devops-dojo-teams.png");
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.hacker {
+  position: relative !important;
+  height: 40px !important;
+  width: 40px !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  box-sizing: border-box;
+  display: block;
+}
+
+.white {
+  background-image: url("images/hackercat-devops-dojo-whitebelt.png");
+  top: -40px;
+  left: 40px;
+}
+
+.orange {
+  background-image: url("images/hackercat-devops-dojo-orangebelt.png");
+  top: -80px;
+  left: 80px;
+}
+
+.green {
+  background-image: url("images/hackercat-devops-dojo-greenbelt.png");
+  top: -120px;
+  left: 120px;
+}
+
+.black {
+  background-image: url("images/hackercat-devops-dojo-blackbelt.png");
+  top: -160px;
+  left: 160px;
+}
+
+body-content {
+  margin-bottom: 80px;
+  flex-shrink: 0 !important;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  background-color: rgb(34, 34, 34) !important;
+  border-top: none;
+  padding: unset;
+}
+
+.py-2 {
+  padding-bottom: 0.5rem !important;
+  padding-top: 0.5rem !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.mx-5 {
+  margin-left: 3rem !important;
+  margin-right: 3rem !important;
+}
+
+.my-2 {
+  margin-bottom: 0.5rem !important;
+  margin-top: 0.5rem !important;
+}
+
+.toc,
+.toc ul,
+.toc li {
+  font-size: 14px !important;
+}
+
+.expand-stub {
+  font-family: "Glyphicons Halflings";
+  font-size: 9px;
+  top: 5px;
+}
+
+.toc .nav > li.active > .expand-stub::before,
+.toc .nav > li.in > .expand-stub::before,
+.toc .nav > li.in.active > .expand-stub::before,
+.toc .nav > li.filtered > .expand-stub::before {
+  content: "\e080";
+}
+
+.toc .nav > li > .expand-stub::before,
+.toc .nav > li.active > .expand-stub::before {
+  content: "\e114";
+}
+
+.level3 li {
+  margin: 2px;
+}
+
+.sidetoc.shiftup {
+  padding-bottom: 100px;
+  bottom: 0px;
+}
+
+.landing-page-hero {
+  padding-bottom: 40px;
+}
+
+.landing-page-about {
+  padding-bottom: 40px;
+}
+
+.landing-page-about a {
+  background-color: #337ab7;
+  color: rgb(245, 245, 245);
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+}
+
+.landing-page-about a::after {
+  font-family: "Glyphicons Halflings";
+  font-size: 10px;
+  position: relative;
+  left: 10px;
+  content: "\e080";
+}
+
+.landing-page-directory-item {
+  display: block;
+  box-shadow: 0 1.6px 3.6px 0 hsla(0, 0%, 0%, 0.132),
+    0 0.3px 0.9px 0 hsla(0, 0%, 0%, 0.108);
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.landing-page-directory-item p a {
+  padding-left: 20px;
+}
+
+.landing-page-directory-item p img {
+  height: 80px;
+}
+
+.subnav,
+header {
+  background-color: rgb(34, 34, 34);
+}
+
+.navbar {
+  border: none;
+}
+
+.breadcrumb li a {
+  color: rgb(245, 245, 245);
+}
+
+.navbar-nav a.active {
+  text-decoration: underline;
+  background-color: unset !important;
+}

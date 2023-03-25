@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <script type="text/javascript">
+    !function(T,l,y){var S=T.location,u="script",k="instrumentationKey",D="ingestionendpoint",C="disableExceptionTracking",E="ai.device.",I="toLowerCase",b="crossOrigin",w="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"4",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[I](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,p,l,u;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][I]()]=i[1])}if(!e[D]){var r=e.endpointsuffix,o=r?e.location:null;e[D]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[k]||d[k]||"",p=s[D],l=p?p+"/v2/track":config.endpointUrl,(u=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=l,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),u.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,l)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:w,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(w,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(u,l))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(u);n.src=h;var e=y[b];return!e&&""!==e||"undefined"==n[b]||(n[b]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(u)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[C]&&!0!==s[C]){method="onerror",t(["_"+method]);var c=T[method];T[method]=function(e,t,n,a,i){var r=c&&c(e,t,n,a,i);return!0!==r&&m["_"+method]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);(T[t]=n).queue&&0===n.queue.length&&n.trackPageView({})}(window,document,{
+    src: "https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",
+    cfg: {
+        instrumentationKey: "b0b411e6-3e51-4578-b762-608bb183d4a6"
+    }});
+    var telemetryInitializer = (envelope) => {
+      envelope.data.someField = 'This item passed through my telemetry initializer';
+    };
+    appInsights.addTelemetryInitializer(telemetryInitializer);
+    appInsights.trackTrace({message: 'This message will use a telemetry initializer'});
+    var id = null;
+    fetch('/.auth/me').then(function(response){
+      return response.json();
+    }).then(function(data){
+      id = data[0].user_id;
+      appInsights.setAuthenticatedUserContext(id);
+    });
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Module 1: Configure IAC Workflow - ARM | DevOps Dojo </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Module 1: Configure IAC Workflow - ARM | DevOps Dojo ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../../../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../../../toc.html">
+  
+  
+  
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../../../index.html">
+                <div class="msft-logo"></div>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p><strong><a href="index.html">Home</a> | <a href="module1.html">Module 1</a> | <a href="module2.html">Module 2</a></strong></p>
+<h1 id="module-1-configure-iac-workflow---arm"><strong>Module 1: Configure IAC Workflow - ARM</strong></h1>
+<hr>
+<h2 id="what-is-infrastructure-as-code-iac">What is Infrastructure as Code (IAC)?</h2>
+<p>Infrastructure as Code is a set of techniques and practices which help IT Pros remove the burden associated with the day to day build and management of modular infrastructure. It allows IT Pros to build and maintain their modern server environment in a way that is similar to how software developers build and maintain application code</p>
+<p>Infrastructure as Code (IaC) is the management of infrastructure (networks, virtual machines, load balancers, and Storage) in a descriptive model, using the same versioning as DevOps team uses for source code. Like the principle that the same source code generates the same binary, an IaC model generates the same environment every time it is applied. IaC is a key DevOps practice and is used in conjunction with continuous delivery.</p>
+<h2 id="what-are-github-actions-">What are Github Actions ?</h2>
+<p><a href="https://docs.github.com/en/actions">GitHub Actions</a> helps you automate your software development workflows from within GitHub. You can deploy workflows in the same place where you store code and collaborate on pull requests and issues.</p>
+<p>In GitHub Actions, a <a href="https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions">workflow</a> is an automated process that you set up in your GitHub repository. You can build, test, package, release, or deploy any project on GitHub with a workflow.</p>
+<p>GitHub Actions help  team to be agile and competitive in today's marketplace. They help you automate tasks for the system development or solution development lifecycle.
+Suppose you and your team are developing a solution that will require a significant number of resources in an Azure environment. You need to ensure that the solution can be deployed quickly and automatically as part of a continuous integration and continuous delivery (CI/CD) pipeline. That way, you can automate the creation and teardown of the project's infrastructure. By including the resource management in your CI/CD pipeline, you're adopting infrastructure as code (IaC) to automate the IT tasks.</p>
+<h2 id="what-are-workflows-">What are Workflows ?</h2>
+<p>Workflows have one or more jobs. Each job contains a set of steps that perform individual tasks. Steps can run commands or use an action. You can create your own actions or use actions shared by the GitHub community and customize them as needed. Each workflow is made up of individual actions that run after a specific event (like a pull request) occur. The individual actions are packaged scripts that automate software development tasks.</p>
+<p>GitHub Actions enable you to create custom workflows for the software development lifecycle directly in the GitHub repository where your ARM templates are stored. A YAML file defines a workflow.</p>
+<p>A basic workflow for deploying an ARM template can have at least three steps:</p>
+<ol>
+<li>Check out a template file.</li>
+<li>Sign in to Azure.</li>
+<li>Deploy the template.</li>
+</ol>
+<p>The Azure sign-in action uses a service principal to authenticate against Azure. For the principal of a CI/CD workflow to deploy Azure resources, it needs the right built-in contributor.</p>
+<p>Several tools are available to help you achieve these goals of deploying and Implementing IAC. Some examples are :</p>
+<p><img src="../../media/IAC.PNG" alt="IAC tools"></p>
+<h2 id="exercise-1-configure-authentication-between-github-actions-and-your-azure-subscription">Exercise 1: Configure authentication between GitHub Actions and your Azure subscription</h2>
+<hr>
+<p><strong>Note:</strong> You can skip this exercise if you have already configured IAC in Getting-Started section.</p>
+<p>To deploy any resources to Azure by using GitHub Actions, you need to create an Azure service principal and give it permissions to create resources defined in your templates. You'll perform that step in the Azure Cloud Shell section of the Azure portal after you're signed in to your subscription.</p>
+<ul>
+<li><strong>Create the service principal</strong> section:</li>
+</ul>
+<p>For the principal of a GitHub Actions workflow to deploy Azure resources, it needs the right built-in contributor.</p>
+<p>The following Azure CLI script shows how you can generate an Azure service principal with contributor permissions in an Azure resource group. This resource group is where the workflow will deploy the resources defined in your ARM template. Note that <strong>you need to be owner of such subscription</strong> in order to give your service principal contributor rights.</p>
+<ul>
+<li><strong>Make sure you note the &quot;projectName&quot; variable as we will be using this same variable in the other places too.. we will be editing the arm template resource group section in later exercises</strong></li>
+</ul>
+<pre><code class="lang-powershell">projectName=&quot;GitHubActionExercise&quot;
+location=&quot;eastus&quot;
+resourceGroupName=&quot;mgr-${projectName}-gc&quot;
+appName=&quot;http://${projectName}&quot;
+
+# Create the resource group
+az group create --name $resourceGroupName --location $location
+
+# Store the resource group ID in a variable
+scope=$(az group list --query &quot;[?contains(name, '$resourceGroupName')].id&quot; -o tsv)
+
+# Create the service principal with contributor rights to the resource group we just created
+az ad sp create-for-rbac --name $appName --role Contributor --scopes $scope --sdk-auth
+</code></pre>
+<p>In the portal, while you're signed in your subscription, select the Cloud Shell icon to open the shell at the bottom of the page.</p>
+<p><img src="../../media/SP.gif" alt="Create SP using cloud shell"></p>
+<p>In the shell, use the preceding code to create the service principal. You'll get the following results. Copy the JSON part of the results (the content in the red box in the following screenshot) because you'll need it when configuring the secret in GitHub.</p>
+<p><img src="../../media/spn-creation.png" alt="SPN creation"></p>
+<p>Copy the JSON output and store it as a GitHub secret within your GitHub repository. To do this, from your GitHub repository, select the Settings tab and then select Secrets from the left menu.</p>
+<p>Enter the following values and then select Add secret:</p>
+<ol>
+<li>Name: Enter AZURE_CREDENTIALS.</li>
+<li>Value: Paste the JSON output that you copied earlier.</li>
+</ol>
+<p><img src="../../media/secret.gif" alt="Secret"></p>
+<p>This is the information that you'll need to specify the authentication in the workflow.</p>
+<h2 id="exercise-2-verify-arm-template-file-in-the-repo">Exercise 2: Verify ARM template file in the repo</h2>
+<hr>
+<ol>
+<li><p>Go to the IAC repository in Github and open the GitHub Codespaces if you have one already created. If not, go ahead and select <code>+ New codespace</code>.</p>
+</li>
+<li><p>Navigate to <code>mgr-sh360-infrastructure-template/ARM-templates</code> folder. All the ARM templates that we will be using to deploy the infrastructure resources on Azure are in this folder. Take some time to explore this folder and understand the ARM templates.</p>
+<p><img src="../../media/var5.PNG" alt="ARM template"></p>
+</li>
+<li><p>Click on the Arm template JSON files and verify all the required parameters and Values are present.</p>
+</li>
+</ol>
+<h2 id="exercise-3-update-landing-zone-workflow-file">Exercise 3: Update Landing Zone WorkFlow File</h2>
+<hr>
+<ol>
+<li><p>The workflow files are stored in the .github/workflows folder at the root of your repository. The workflow file extension can be either .yml or .yaml.</p>
+</li>
+<li><p>Navigate to mgr-sh360-infrastructure-template/.github/workflows/Landing-zone.yml file.</p>
+<p><img src="../../media/var6.PNG" alt="Workflow"></p>
+</li>
+<li><p>Create a new branch following the <code>users/{user_alias}/{purpose_of_the_branch}</code> schema.</p>
+</li>
+<li><p>A workflow file, starts with defining its name, which in our case is <strong>ARM deploying Landing Zone</strong>. Next is the Triggers section called <strong>on</strong>, this section is responsible for listing down all the different ways this workflow is triggered. We have defined 3 ways here:</p>
+<ul>
+<li><p><strong>Push</strong>: This trigger ensures that whenever a new update is pushed in particular branches this build workflow must run. We have specified just the main branch, thus only when the main branch has some updates pushed the build pipeline is expected to run.</p>
+</li>
+<li><p><strong>Pull Request</strong>: This trigger ensures that whenever a PR is raised against a particular branch, the build pipeline is run as a verification run. We have specified just the main branch, thus only when a PR is raised against the main branch, the build pipeline is expected to run.</p>
+</li>
+<li><p><strong>Workflow Dispatch</strong>: This option is used for manually triggering the workflow.</p>
+</li>
+</ul>
+</li>
+<li><p>Uncomment the <strong>push and pull request section</strong> in the triggers, to let the workflow trigger automatically on a push or PR to the main branch.</p>
+</li>
+<li><p>Moving on, next section of a workflow is jobs. There can be n number of jobs inside a workflow, and each job can have n number of actions within it to perform various tasks. Each job runs on a particular agent and this is specified using the option <strong>runs-on</strong>. GitHub by default has <a href="https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners">GitHub hosted agents</a> with various operating systems like windows, ubuntu, macos. But one can also make use of self-hosted agents. In our case for the Landing Zone deploy stage we utilize the <strong>ubuntu-latest</strong> agent.</p>
+</li>
+<li><p>Inside the job, there are multiple actions defined under the <strong>steps</strong> section.</p>
+</li>
+<li><p>The first action, <strong>Checkout Repository</strong>, is responsible for cloning the code into the agent upon which actions will be performed.</p>
+</li>
+<li><p>Next 2 actions <strong>Set Environment Variables</strong> is used to set variable groups that this workflow makes use of during the run. These variable groups are defined under the folder <code>.github &gt; variables</code>. Since GitHub currently doesn't have a concept of variable groups, we created this custom action to make use of variable groups in workflows.</p>
+</li>
+<li><p>Next, Azure Login is used to authenticate to Azure utilizing the Service Principle that we have added in the Secrets.</p>
+</li>
+<li><p>The next few tasks are responsible for ARM template deployment on Azure. There are 2 ways to achieve this, firstly using the azure cli action available in GitHub, and calling the <code>az deployment group create</code> azure cli command. The second way is by utilizing the arm-deploy action available in GitHub, and filling in appropriate values such as template path, resource group name, etc.</p>
+</li>
+<li><p>Go to the action: <strong>Azure ARM - Deploy Azure Activity log</strong>. This action is currently disabled, to enable this removed the if: {{ false }} from the action. This action uses azure cli to deploy azure activity log ARM template.</p>
+</li>
+<li><p>Go to the action: <strong>Azure ARM - Deploy Azure Action Group</strong>. This action is currently disabled, to enable this removed the if: {{ false }} from the action. This action uses arm-deploy action to deploy azure action group ARM template.</p>
+</li>
+<li><p>After having done all the changes. Commit them and create a Pull Request. As part of the pull request check, the Landing Zone workflows will be triggered. Once the pull requests is approved and checks have been passed, you can merge the changes into the main branch.</p>
+<p><img src="../../media/landing_zone_changes.gif" alt="Landing Zone Updates"></p>
+</li>
+<li><p>To know more about the Actions used refer: <a href="https://github.com/Azure/actions-workflow-samples">Azure GitHub Actions</a></p>
+</li>
+<li><p>As part of this merge, the IAC workflow will be triggered again. If successfully executed, Monitor the progress of the workflow by checking the Components are created. Once the Shared IAC is deployed.</p>
+<p><img src="../../media/var4.PNG" alt="Deployment"></p>
+</li>
+</ol>
+<h1 id="key-takeaways"><strong>Key takeaways</strong></h1>
+<hr>
+<ul>
+<li>Learning GitHub Workflow and Actions.</li>
+<li>Deploy IAC</li>
+<li>Understanding the Azure Resources and Automation.</li>
+</ul>
+<hr>
+<h2 id="whats-next-">What's Next ?</h2>
+<hr>
+<p><a href="module2.html">Module 2 - Configure IAC Workflow - Terraform</a></p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="w-100 py-2">
+          <div class="container my-2">
+              <div class="hacker white"></div>
+              <div class="hacker orange"></div>
+              <div class="hacker green"></div>
+              <div class="hacker black"></div>
+              <div class="dojo-teams hidden-xs hidden-sm"></div>
+          </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/main.js"></script>
+  </body>
+</html>

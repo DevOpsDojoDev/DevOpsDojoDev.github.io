@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <script type="text/javascript">
+    !function(T,l,y){var S=T.location,u="script",k="instrumentationKey",D="ingestionendpoint",C="disableExceptionTracking",E="ai.device.",I="toLowerCase",b="crossOrigin",w="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"4",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[I](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,p,l,u;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][I]()]=i[1])}if(!e[D]){var r=e.endpointsuffix,o=r?e.location:null;e[D]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[k]||d[k]||"",p=s[D],l=p?p+"/v2/track":config.endpointUrl,(u=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=l,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),u.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,l)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:w,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(w,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(u,l))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(u);n.src=h;var e=y[b];return!e&&""!==e||"undefined"==n[b]||(n[b]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(u)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[C]&&!0!==s[C]){method="onerror",t(["_"+method]);var c=T[method];T[method]=function(e,t,n,a,i){var r=c&&c(e,t,n,a,i);return!0!==r&&m["_"+method]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);(T[t]=n).queue&&0===n.queue.length&&n.trackPageView({})}(window,document,{
+    src: "https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",
+    cfg: {
+        instrumentationKey: "b0b411e6-3e51-4578-b762-608bb183d4a6"
+    }});
+    var telemetryInitializer = (envelope) => {
+      envelope.data.someField = 'This item passed through my telemetry initializer';
+    };
+    appInsights.addTelemetryInitializer(telemetryInitializer);
+    appInsights.trackTrace({message: 'This message will use a telemetry initializer'});
+    var id = null;
+    fetch('/.auth/me').then(function(response){
+      return response.json();
+    }).then(function(data){
+      id = data[0].user_id;
+      appInsights.setAuthenticatedUserContext(id);
+    });
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Module 1: Build, Test and Run application with Visual Studio | DevOps Dojo </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Module 1: Build, Test and Run application with Visual Studio | DevOps Dojo ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../../../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../../../toc.html">
+  
+  
+  
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../../../index.html">
+                <div class="msft-logo"></div>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p><strong><a href="../index.html">Home</a> | <a href="module1.html">Module 1</a> | <a href="module2.html">Module 2</a> | <a href="module3.html">Module 3</a> | <a href="module4.html">Module 4</a> |</strong></p>
+<h1 id="module-1-build-test-and-run-application-with-visual-studio"><strong>Module 1: Build, Test and Run application with Visual Studio</strong></h1>
+<hr>
+<p>In this module we will clone existing Bookings (Asp .Net Web Application) git repository, fix one code analysis warning and build the code locally to make sure app is running successfully.</p>
+<h2 id="exercise-1-open-the-code-using-visual-studio-and-run-the-application">Exercise 1: Open the code using Visual Studio and run the application</h2>
+<hr>
+<p>To complete this exercise, you will clone bookings repository and run the application locally.</p>
+<h3 id="prerequisites---exercise-1">Prerequisites - Exercise 1</h3>
+<hr>
+<ul>
+<li>Bookings code repository must be in place and bootstrap setup must be complete.</li>
+<li>Visual Studio IDE is installed.</li>
+</ul>
+<hr>
+<ol>
+<li><p>Open the <strong>GitHub - Bookings</strong> repository.</p>
+</li>
+<li><p>Select <code>Code</code> and copy the HTTPS link provided. Then open your the cmd console and go to the desired location in your computer. Type <code>git clone {copied_url}</code> to clone the repository locally.</p>
+<p><img src="../../media/clone_repository.gif" alt="Clone repository locally"></p>
+</li>
+<li><p>Open the project using Visual Studio.</p>
+<p><img src="../../media/open_project_visual_studio.gif" alt="Open the project"></p>
+</li>
+<li><p>Before making any changes, lets create a <strong>new branch</strong> from main branch. We will make use of the same branch across all 4 modules, so note the branch name. Select main from bottom left, select Create new branch, enter branch name and click enter.</p>
+<p><img src="../../media/create_new_branch_bookings.gif" alt="Create branch"></p>
+</li>
+<li><p>Go to Web.config in the solution explorer from <code>SmartHotel360.Registration.Web-&gt;Web.Config</code>. Here update these following keys' values and save:</p>
+<ul>
+<li>SqlServerName: <code>{cus_prefix}-bookings-server-dev-{team_suffix}</code></li>
+<li>DatabaseName: <code>bookings-db-dev</code></li>
+<li>KeyVaultUri: <code>https://{cus_prefix}-bookingkvdev{team_suffix}.vault.azure.net/</code></li>
+<li>ServicePrincipalClientId: Lab Access Information</li>
+<li>ServicePrincipalPassword: Lab Access Information</li>
+<li>TenantId: Lab Access Information</li>
+</ul>
+<p><img src="../../media/update_web_config.gif" alt="Update web-config file"></p>
+</li>
+<li><p>Before running the application locally, go the Azure subscription and, for the SQL server in the DEV resource group, add your IP address to the firewall.</p>
+<p><img src="../../media/add_ip_address.gif" alt="Add IP address"></p>
+</li>
+<li><p>We will run the application on Visual Studio and ensure its up and running. Select <code>IIS Express (Microsoft Edge)</code>. This will take about 5 minutes when running the project for first time.</p>
+<p><img src="../../media/run_bookings_locally.png" alt="Run bookings application"></p>
+</li>
+<li><p>Once the application is running you should be able to see Home page of Smart hotel in default browser.</p>
+<p><img src="../../media/open_application_browser.png" alt="Open coupons application in browser"></p>
+</li>
+<li><p>Once you have explored the application, go back to the Visual Studio, and stop the application.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you build the solution for the first time, there might be errors stating missing Nuget packages. From the Visual Studio | Tools menu | NuGet Package Manager | Package Manager Settings | Options dialog box | In the left pane select Package Sources, check or add package source name: nuget.org, Source: <a href="https://www.nuget.org/api/v2/">https://www.nuget.org/api/v2/</a>.</p>
+</div>
+</li>
+</ol>
+<h2 id="exercise-2-run-and-fix-local-code-analysis-error">Exercise 2: Run and fix local code analysis error</h2>
+<hr>
+<p>In this exercise, we will cover <strong>Code Analysis</strong> as part of <strong>Security Static code analysis</strong> in Integrated Development Environment. For the types of problems that can be detected during the software development phase itself as it provides <em>immediate feedback</em> to the developer on issues they might be introducing into the code during code development itself. This immediate feedback is very useful, especially when compared to finding vulnerabilities much later in the development cycle.</p>
+<h3 id="prerequisites---exercise-2">Prerequisites - Exercise 2</h3>
+<hr>
+<ul>
+<li>Exercise 1 must be completed with application running successfully on Visual Studio.</li>
+<li>Visual Studio IDE is installed.</li>
+</ul>
+<hr>
+<ol>
+<li><p>To enable Code analysis for <strong>SmartHotel360.Registration.Web</strong>, right click on <strong>SmartHotel360.Registration.Web</strong>-&gt;Click on <strong>Properties</strong> as shown below:</p>
+</li>
+<li><p>Check the <strong>Enable Code Analysis on Build</strong> check box and select the ruleset from the browse button as shown below:</p>
+<p><img src="../../media/enable_code_analysis_bookings.gif" alt="Enable Code Analysis"></p>
+</li>
+<li><p>To run Code Analysis on <strong>SmartHotel360.Registration.Web</strong> project, Right click <strong>SmartHotel360.Registration.Web</strong> project -&gt; <strong>Build</strong>.</p>
+</li>
+<li><p>Select <strong>N warnings</strong> by opening the tab &quot;Errors&quot; on the Output window. You should be able to see list of warnings (SA/CA/CS type) in Error List as shown below once Code analysis scan is successful.</p>
+</li>
+<li><p>Code Analysis rules can also be configured to show up as errors if desired. The warnings produced by Code Analysis provide a wealth of information including a <em>unique ID</em> (such as <strong>CS1591</strong> in the screenshot above), a <em>description of the problem or suggested fix</em>, and the <em>file location</em> of the offending code.</p>
+</li>
+<li><p>The <strong>Error List window</strong> contains a <strong>search box</strong> where you can <strong>filter code analysis results</strong> on <em>warning number</em>, <em>text in the title</em> or <em>message of the warning</em>, as well as <em>filename or function name</em>.</p>
+</li>
+<li><p>Enter <code>CS1591</code> into the search box as highlighted below.</p>
+</li>
+<li><p>Sort the list of warning by File and <strong>double-click</strong> the <strong>first result</strong> shown in the Error List window to load the specified location in the code editor.</p>
+</li>
+<li><p>Now we will perform the <strong>code fix necessary</strong> to resolve the warning. <em>For CS1591, we are told that we should update the Missing XML Documents</em>. <strong>Resolve the warning</strong> by updating the summary. Just type /// and add the name of the class as shown in the video.</p>
+<p><img src="../../media/update_document_configuration.gif" alt="Update document"></p>
+</li>
+<li><p><strong>Save</strong> the file and verify that the warning disappears as expected. There should be one less warning than before.</p>
+</li>
+</ol>
+<h2 id="exercise-3-run-unit-tests">Exercise 3: Run unit tests</h2>
+<hr>
+<p>To complete this exercise, you will run the already written unit tests for the bookings application on Visual Studio.</p>
+<h3 id="prerequisites---exercise-3">Prerequisites - Exercise 3</h3>
+<hr>
+<ul>
+<li>Exercise 2 must be completed with at least one code analysis errors fixed.</li>
+<li>Visual Studio IDE is installed.</li>
+</ul>
+<hr>
+<ol>
+<li><p>To open Test Explorer Window, go to <code>Test menu -&gt; Test Explorer</code>.</p>
+</li>
+<li><p>Right click and build the <strong>SmartHotel360.Registration.Web.Tests</strong>.</p>
+</li>
+<li><p>To run the unit Test go to Test Explorer Window and right click on <strong>SmartHotel360.Registration.Web.Tests.BusinessLogicUnitTests</strong> -&gt; <strong>Run</strong> to run the selected tests.</p>
+</li>
+<li><p>Once the test ran successfully, you should be able to see the status as <strong>Green</strong> for all the seven unit tests.</p>
+<p><img src="../../media/run_local_unit_test_bookings.gif" alt="Running unit tests locally"></p>
+</li>
+</ol>
+<h2 id="exercise-4-commit-and-push-changes">Exercise 4: Commit and Push changes</h2>
+<hr>
+<p>To complete this exercise, you will stage, commit and push the changes that you made in the previous exercises.</p>
+<h3 id="prerequisites---exercise-4">Prerequisites - Exercise 4</h3>
+<hr>
+<ul>
+<li>Exercise 3 must be completed and all unit tests must pass.</li>
+<li>Visual Studio IDE is installed.</li>
+</ul>
+<hr>
+<ol>
+<li><p>Now, lets commit and push our changes into the local branch we created. Please note, we should <strong>remove service principal information from the file web.config</strong>, since this contains secrets which should not be exposed, and are only required to run the application locally.</p>
+</li>
+<li><p>Select the Git Changes tab next to Solution Explorer. If you don’t see the Git Changes tab, open it from the menu by View -&gt; Git Changes. Review the changes and, if happy, stage them by clicking in the + button. Enter an appropriate commit message and select <code>Commit Staged</code>. Then push these changes onto the branch by clicking on the push icon next to the branch name at bottom of Visual Studio.</p>
+<p><img src="../../media/commit_and_push.gif" alt="Commit and Push changes"></p>
+</li>
+</ol>
+<h1 id="key-takeaways"><strong>Key Takeaways</strong></h1>
+<hr>
+<ul>
+<li>You can easily clone a work with your repository using your day-to-day IDE.</li>
+<li>Visual Studio can be used to make code changes, run and test application.</li>
+</ul>
+<hr>
+<h2 id="whats-next-">What's Next ?</h2>
+<hr>
+<p><a href="module2.html">Module 2 - Configure Build Pipeline</a></p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="w-100 py-2">
+          <div class="container my-2">
+              <div class="hacker white"></div>
+              <div class="hacker orange"></div>
+              <div class="hacker green"></div>
+              <div class="hacker black"></div>
+              <div class="dojo-teams hidden-xs hidden-sm"></div>
+          </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/main.js"></script>
+  </body>
+</html>

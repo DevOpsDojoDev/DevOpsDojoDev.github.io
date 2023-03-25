@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <script type="text/javascript">
+    !function(T,l,y){var S=T.location,u="script",k="instrumentationKey",D="ingestionendpoint",C="disableExceptionTracking",E="ai.device.",I="toLowerCase",b="crossOrigin",w="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"4",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[I](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,p,l,u;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][I]()]=i[1])}if(!e[D]){var r=e.endpointsuffix,o=r?e.location:null;e[D]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[k]||d[k]||"",p=s[D],l=p?p+"/v2/track":config.endpointUrl,(u=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=l,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),u.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,l)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:w,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(w,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(u,l))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(u);n.src=h;var e=y[b];return!e&&""!==e||"undefined"==n[b]||(n[b]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(u)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[C]&&!0!==s[C]){method="onerror",t(["_"+method]);var c=T[method];T[method]=function(e,t,n,a,i){var r=c&&c(e,t,n,a,i);return!0!==r&&m["_"+method]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);(T[t]=n).queue&&0===n.queue.length&&n.trackPageView({})}(window,document,{
+    src: "https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",
+    cfg: {
+        instrumentationKey: "b0b411e6-3e51-4578-b762-608bb183d4a6"
+    }});
+    var telemetryInitializer = (envelope) => {
+      envelope.data.someField = 'This item passed through my telemetry initializer';
+    };
+    appInsights.addTelemetryInitializer(telemetryInitializer);
+    appInsights.trackTrace({message: 'This message will use a telemetry initializer'});
+    var id = null;
+    fetch('/.auth/me').then(function(response){
+      return response.json();
+    }).then(function(data){
+      id = data[0].user_id;
+      appInsights.setAuthenticatedUserContext(id);
+    });
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Module 1: Application Deployment | DevOps Dojo </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Module 1: Application Deployment | DevOps Dojo ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../../../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../../../toc.html">
+  
+  
+  
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../../../index.html">
+                <div class="msft-logo"></div>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p><strong><a href="../index.html">Home</a> | <a href="module1.html">Module 1</a> |</strong></p>
+<h1 id="module-1-application-deployment"><strong>Module 1: Application Deployment</strong></h1>
+<hr>
+<p><a href="https://docs.github.com/en/actions">GitHub Actions</a> help you automate your software development workflows from within GitHub. You can deploy workflows in the same place where you store code and collaborate on pull requests and issues.</p>
+<p>In GitHub Actions, a <a href="https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions">workflow</a> is an automated process that you set up in your GitHub repository. You can build, test, package, release, or deploy any project on GitHub with a workflow.</p>
+<p>Each workflow is made up of individual actions that run after a specific event (like a pull request) occur. The individual actions are packaged scripts that automate software development tasks.</p>
+<h2 id="exercise-1-deployment-strategy">Exercise 1: Deployment strategy</h2>
+<hr>
+<p>In this module we will introduce the strategy followed for the Continuous Delivery workflow, to automate the creation of infrastructure and deployment of a new build.</p>
+<p>There are three environments that we want to automate the deployment to:</p>
+<ul>
+<li><p><strong>DEV</strong>: Developers use DEV stage to do testing/build/experiments for the app.</p>
+</li>
+<li><p><strong>QA</strong>: Developers use QA stage (after DEV stage) to run <em>automated integration tests</em> in this stage/environment. Integration tests are used to immediately alert the team if modifications introduced have an unexpected or negative impact to the existing functionality. Run <em>automated UI tests</em> in this stage/environment to identify the presence of defects in a product/software under test by using Graphical User Interface (GUI).</p>
+</li>
+<li><p><strong>PRD</strong>: Production stage that is generally hand-off to the customer. Any changes deployed to production stage must have pre-approvals set and should be deployed when all other environments are deployed successfully including running all the tests.</p>
+</li>
+</ul>
+<p><img src="../../media/environments-diagram.png" alt="Environments diagram"></p>
+<p>Each environment should be deployed in the sequence based on the success of the previous environment. To understand how this is achieved in the Continuous-delivery, we need to checkout the <strong>on</strong> section. This is the section where triggers for the workflow are configured. Configure the <code>workflow_dispatch</code> to determine the types of trigger. This allows manually trigger the workflow under demand.</p>
+<p><img src="../../media/coupons-reference-branch-workflow2.gif" alt="Workflow dispatch execution"></p>
+<p>Triggers can be configured against specific branches. For this set of labs, we have established a naming convention for our branches based on the <code>users/{user_alias}/{purpose_of_the_branch}</code> schema. This is why, under <code>branches:</code> you can see both, <code>main</code> and <code>users/**</code>.</p>
+<p>On the other side, you can also find the <code>workflow_run</code> type of trigger configure. This trigger will ensure that every time the <code>Continuous-integration</code> completed then automatically our Continuous-delivery workflow will run, ensuring a seamless DevOps experience from a deployment perspective.</p>
+<pre><code class="lang-yml">name: Continuous-Delivery
+
+#Triggers to run the workflow
+on:
+  workflow_run:
+    workflows: [&quot;Continuous-integration&quot;]
+    types:
+      - completed
+  workflow_dispatch:
+    branches: [ main, users/** ]
+</code></pre>
+<p>Take some time to understand how <code>continuous-delivery.yml</code> and <code>environment-template.yml</code> workflows interact. Given that many of the steps need to be executed in every environment (deploy infrastructure, deploy application, run security tests, etc) rather than copying and pasting from one workflow to another, we wanted to reuse as much code as possible so the maintenance of it gets simplified. In order to do that we have taken advantage of the <a href="https://docs.github.com/en/actions/using-workflows/reusing-workflows">reusable workflows</a>. Following this startegy, the <code>continuous-delivery.yml</code> will behave as the <em>caller</em> while the <code>environment-template.yml</code> is the reusable workflow that, based on some conditions, may execute all of the defined steps or not. E.g. integration tests should only be run in the <strong>Qa</strong> environment.</p>
+<p>Finally, in order to have a clear differentiation of how each DevOps capability is applied to the overall lifecycle we will be using <a href="https://docs.github.com/en/actions/creating-actions/about-custom-actions#composite-actions">composite actions</a>. A composite action allows you to combine multiple workflow steps within one action. they have led to smaller, more readable workflows as each action has a specific purpose. Some of the advanatges include:</p>
+<ul>
+<li>Separate large workflows into multiple files.</li>
+<li>Create componentized actions to be used in multiple workflows - reducing duplication.</li>
+<li>Many steps are condensed into a single one within the Actions view on GitHub, improving the ability to track a workflows progress.</li>
+<li>The descriptive nature of an action.yml file improves the readability of a GitHub workflow when understanding necessary inputs and outputs.</li>
+</ul>
+<p><img src="../../media/composite-actions.png" alt="Composite action"></p>
+<h2 id="exercise-2-workflow-changes">Exercise 2: Workflow changes</h2>
+<hr>
+<p>To complete this exercise, you will make changes to the Continuous-delivery, which is <strong>continuous-delivery.yml</strong>. The objective is to enable all actions from the continuous-delivery composite action, to automatically deploy the required infrastructure and source code in the web app.</p>
+<ol>
+<li><p>Go to the repository in Github.</p>
+</li>
+<li><p>Click on <strong>Settings</strong> &gt; <strong>Environments</strong> and select the <strong>prd</strong> environment. In this blade you can configure different settings like minimum number of approvers, wait timer before deployment, allowed branches to deploy in this environment and environment secrets.</p>
+</li>
+<li><p>Select the checkbox <strong>Required reviewers</strong> and add your team's name. Now, before deploying into the production environment, someone from that team will need to approve deployment.</p>
+<p><img src="../../media/github-environments2.gif" alt="Configure GitHub environments"></p>
+</li>
+<li><p>Go back to the repository and open the GitHub Codespaces if you have one already created. If not, go ahead and select <code>+ New codespace</code>.</p>
+<p><img src="../../media/github-codespaces.gif" alt="Open GitHub codespaces"></p>
+</li>
+<li><p>Create a new branch following the <code>users/{user_alias}/{purpose_of_the_branch}</code> schema.</p>
+</li>
+<li><p>Open the <strong>.github/workflows/environment-template.yml</strong> file.</p>
+</li>
+<li><p>In the <strong>config_variables</strong> job you can see how we are configuring some environment variables based on the <code>.github/variables/variables.json</code> file. These variables are setup as outputs of the job so they can be defined once but consume multiple times in the subsequent jobs.</p>
+</li>
+<li><p>As part of every job we will checkout the repository first and then call the corresponding composite action. In the <strong>release</strong> job definition you can see how that is done. Lets uncomment the <code>Deploy to Azure - ${{ inputs.environment }}</code> step and see what it does.</p>
+</li>
+<li><p>Open the <code>.github/actions/continuous-delivery/action.yml</code> file. First thing you can see is how <strong>input</strong> parameters are defined. Then we have the output section that let us define some <strong>output</strong>* values that would be passed into the template workflow once the composite action is executed. After that we can see the <strong>run</strong> section where we specify this is a composite action and then define the steps to be executed.</p>
+<pre><code class="lang-yml">name: &quot;Deploy to Azure&quot;
+description: &quot;Deploy resources to azure environment&quot;
+inputs:
+environment:
+    description: &quot;Environment to deploy resources to&quot;
+    required: true
+    default: &quot;dev&quot;
+[...]
+outputs:
+status: 
+    description: &quot;Status&quot;
+    value: ${{ steps.webAppDeploy.outcome }}
+runs:
+using: &quot;composite&quot;
+steps:
+</code></pre>
+</li>
+<li><p>FIrst thing we do is create a <strong>Microsoft Teams card</strong> is created with the details of the specific job. This allows the team to <strong>continuously collaborate</strong> and monitor the status of the deployments without going to the GitHub repository. This is a common approach that will be replicated in every composite action.</p>
+<p><img src="../../media/teams_card.png" alt="Teams card"></p>
+</li>
+<li><p>Next action downloads the build artifacts generated by the <strong>Continuous Integration</strong> workflow.</p>
+</li>
+<li><p>Go to the <code>Create GitHub deployment for deployment-${{ env.pipeline_env }}</code> action. Deployment statuses allow external services to mark deployments with an error, failure, pending, in_progress, queued, or success state that systems listening to deployment_status events can consume. You can also check the deployments history into the different environments.</p>
+<p><img src="../../media/environments.png" alt="Environments"></p>
+<p><img src="../../media/create_github_deployment2.png" alt="Create GitHub deployment"></p>
+</li>
+<li><p>As part of the <strong>shift-left</strong> strategy for quality and security we have implemented a <code>Bicep linter</code> action that checks Bicep files for syntax errors and best practice violations. The linter helps enforce coding standards by providing guidance during development.</p>
+</li>
+<li><p>After the checks have passed for the infrastructure, then we deploy the landing zone in Azure using <strong>bicep</strong> templates.</p>
+</li>
+<li><p>The <code>Azure WebApp</code> action deploys the application onto Azure WebApp. This actions relies on the infrastructure previously deployed in the release job.</p>
+<pre><code class="lang-yml">- name: Azure WebApp
+  id: webAppDeploy
+  uses: Azure/webapps-deploy@v2
+  with:
+    app-name: &quot;${{ inputs.cus_prefix }}-dojo-coupon-${{ inputs.environment }}-${{ inputs.team_suffix }}&quot;
+    package: &quot;$GITHUB_WORKSPACE/drop/${{ inputs.repoName }}/target&quot;
+</code></pre>
+</li>
+<li><p>The <code>Update deployment status</code> tasks will update the status of the deployments in the repository.</p>
+</li>
+<li><p>After having done all the changes. Commit them and create a Pull Request. Refer <a href="../../../continuous-integration/ci-lab-instructions/ci-coupons-lab/module4.html#exercise-2-raise-pr-and-merge-with-main">Raise a PR</a> to see how to raise a new pull request. Link both, the commit and pull request, to the specific task in ADO by using the <code>AB#{work_item_id}</code> format. As part of the pull request check, the CI and CodeQl workflows will be triggered. Once the pull requests is approved and checks have been passed, you can merge the changes into the main branch.</p>
+</li>
+<li><p>As part of this merge, the Continuous-integration workflow will be triggered again. If successfully executed, then the Continuous-delivery will be triggered afterwards. Monitor the progress of the workflow by checking the Microsoft Teams Card created. Once the app is deployed, you can access the link from the workflow details.</p>
+<p><img src="../../media/deployment-coupons.gif" alt="Deployment"></p>
+</li>
+</ol>
+<h1 id="key-takeaways"><strong>Key takeaways</strong></h1>
+<hr>
+<ul>
+<li>Learning GitHub Workflow and Actions.</li>
+<li>Deploy Coupon Application</li>
+<li>Understanding the Azure Resources and Automation.</li>
+</ul>
+<hr>
+<h2 id="whats-next-">What's Next ?</h2>
+<hr>
+<p><a href="../../../continuous-quality/index.html">Continuous Quality</a></p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="w-100 py-2">
+          <div class="container my-2">
+              <div class="hacker white"></div>
+              <div class="hacker orange"></div>
+              <div class="hacker green"></div>
+              <div class="hacker black"></div>
+              <div class="dojo-teams hidden-xs hidden-sm"></div>
+          </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/main.js"></script>
+  </body>
+</html>

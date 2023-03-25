@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <script type="text/javascript">
+    !function(T,l,y){var S=T.location,u="script",k="instrumentationKey",D="ingestionendpoint",C="disableExceptionTracking",E="ai.device.",I="toLowerCase",b="crossOrigin",w="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"4",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[I](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,p,l,u;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][I]()]=i[1])}if(!e[D]){var r=e.endpointsuffix,o=r?e.location:null;e[D]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[k]||d[k]||"",p=s[D],l=p?p+"/v2/track":config.endpointUrl,(u=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=l,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),u.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,l)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:w,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(w,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(u,l))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(u);n.src=h;var e=y[b];return!e&&""!==e||"undefined"==n[b]||(n[b]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(u)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[C]&&!0!==s[C]){method="onerror",t(["_"+method]);var c=T[method];T[method]=function(e,t,n,a,i){var r=c&&c(e,t,n,a,i);return!0!==r&&m["_"+method]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);(T[t]=n).queue&&0===n.queue.length&&n.trackPageView({})}(window,document,{
+    src: "https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",
+    cfg: {
+        instrumentationKey: "b0b411e6-3e51-4578-b762-608bb183d4a6"
+    }});
+    var telemetryInitializer = (envelope) => {
+      envelope.data.someField = 'This item passed through my telemetry initializer';
+    };
+    appInsights.addTelemetryInitializer(telemetryInitializer);
+    appInsights.trackTrace({message: 'This message will use a telemetry initializer'});
+    var id = null;
+    fetch('/.auth/me').then(function(response){
+      return response.json();
+    }).then(function(data){
+      id = data[0].user_id;
+      appInsights.setAuthenticatedUserContext(id);
+    });
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Module 1: Build, Test and Run application with GitHub Codespaces | DevOps Dojo </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Module 1: Build, Test and Run application with GitHub Codespaces | DevOps Dojo ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../../../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../../../toc.html">
+  
+  
+  
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../../../index.html">
+                <div class="msft-logo"></div>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p><strong><a href="../index.html">Home</a> | <a href="module1.html">Module 1</a> | <a href="module2.html">Module 2</a> | <a href="module3.html">Module 3</a> | <a href="module4.html">Module 4</a> |</strong></p>
+<h1 id="module-1-build-test-and-run-application-with-github-codespaces"><strong>Module 1: Build, Test and Run application with GitHub Codespaces</strong></h1>
+<hr>
+<p><a href="https://github.com/features/codespaces">GitHub codespaces</a> provides the flexibility to code from anywhere and anytime. With codespaces you can code, build and test the application right from your browser.
+This module will provide an understanding of how to code and test the coupons application using codespaces, and how to commit these changes to GitHub repository.</p>
+<h2 id="exercise-1-initialize-codespaces-and-run-the-application">Exercise 1: Initialize codespaces and run the application</h2>
+<hr>
+<p>To complete this exercise, you will initialize codespaces for the coupons repository and run the application locally.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This exercise relies on GitHub Codespaces, a preview feature that isn't yet in GA. This may incur into some connectivity errors while performing the lab. If you face any of those, please reconnect to the codespaces until it gets more stable.</p>
+</div>
+<h3 id="prerequisites---exercise-1">Prerequisites - Exercise 1</h3>
+<hr>
+<ul>
+<li>Coupons code repository must be in place and bootstrap setup must be complete.</li>
+<li>Codespaces beta has been subscribed to and enabled for user account.</li>
+</ul>
+<hr>
+<ol>
+<li><p>Open the <strong>GitHub - Coupons</strong> repository.</p>
+</li>
+<li><p>Select <code>Code &gt; Open with Codespaces &gt; + New Codespace</code>. This may take about 5 minutes to initialize the first time.</p>
+<p><img src="../../media/initialize_codespace.gif" alt="Open codespaces with coupons application"></p>
+<p><img src="../../media/create_new_branch.gif" alt="Create branch"></p>
+</li>
+<li><p>Next, go to src &gt; main &gt; resources &gt; application.properties. Here update these following values and save:</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>cus_prefix</code> and <code>{team_suffix}</code> are appends used for naming convention purposes. It consists of three and two characters respectively and can be found at the in your repository name: <code>{cus_prefix}-mgr-sh360-coupons-{team_suffix}</code></p>
+</div>
+<ul>
+<li>spring.datasource.url - <code>jdbc:mysql://{cus_prefix}-dojo-coupon-dev-{team_suffix}.mysql.database.azure.com:3306/hotel_coupon?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false</code></li>
+<li>azure.keyvault.uri - <code>https://{cus_prefix}keyvaultcouponsdev{team_suffix}.vault.azure.net/</code></li>
+<li>azure.keyvault.client-id - Client Id of service principal in Lab Access Information</li>
+<li>azure.keyvault.client-key - Client Secret of service principal in Lab Access Information</li>
+</ul>
+<p><img src="../../media/update_application_properties.gif" alt="Update application.properties file"></p>
+</li>
+<li><p>We will run the application on codespaces and ensure its up and running. For the codespaces to use the right debugger, please open the <code>src/main/java/com/example/fabrikam/HotelCoupon/controller/GuestController.java</code> file in the editor.  Select <code>Run &gt; Run and Debug &gt; Java</code>. If prompted to switch to Standard mode from Lite mode, select Yes. This will take about 5 minutes when running the project for first time. Once the application is running you can open it by clicking on <code>Ports</code> in the window below and clicking on the link next to the port <strong>8080</strong>.</p>
+<p><img src="../../media/run_coupons_codespaces.gif" alt="Run coupons application"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you don't see the <code>Java</code> option, please enable that by clicking on <code>Menu &gt; Run &gt; Add Configuration &gt; Select Java</code></p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you encounter Error 503, <a href="https://docs.github.com/en/codespaces/developing-in-codespaces/forwarding-ports-in-your-codespace#sharing-a-port">verify the Port Visibility for 8080</a> is <code>Public</code></p>
+</div>
+</li>
+<li><p>Once the application is running, a notification will be prompted to open the application in browser. Select <strong>Open in browser</strong>, and the application will open up. Enter following login credentials to login to the application:</p>
+<ul>
+<li>Username: me@smarthotel360.com</li>
+</ul>
+ <!-- [//]: # ([SuppressMessage\("Microsoft.Security", "CS002:SecretInNextLine", Justification="See https://microsoft.githubenterprise.com/microsoft-consulting-services/devops-dojo-docs/issues/264"\)]) -->
+<ul>
+<li>Password: 1234</li>
+</ul>
+<p><img src="../../media/open_application_browser.gif" alt="Open coupons application in browser"></p>
+</li>
+<li><p>Upon login, it will redirect to a 404 page. Don't worry! Thats expected. Go back, and in the browser url bar, append /guest to the existing URL, and you will be redirected to the application home page. Feel free to explore the application.</p>
+<p><img src="../../media/coupons_application_running.png" alt="Coupons application in browser"></p>
+</li>
+<li><p>Once you have explored the application, go back to the codespaces, and stop the application.</p>
+</li>
+<li><p>With live share functionality of codespace, you can take code peering and collaboration to next level. You can live share your codespace with another developer and you can work live on the same code and see how your integrations work.</p>
+</li>
+</ol>
+<h2 id="exercise-2-run-and-fix-local-code-analysis-error">Exercise 2: Run and fix local code analysis error</h2>
+<hr>
+<p>To complete this exercise, you will run code analysis for the application, and fix one of the identified error.</p>
+<h3 id="prerequisites---exercise-2">Prerequisites - Exercise 2</h3>
+<hr>
+<ul>
+<li>Exercise 1 must be completed with application running successfully on codespaces.</li>
+<li>Codespaces beta has been subscribed to and enabled for user account.</li>
+</ul>
+<hr>
+<ol>
+<li><p>Lets see how we can perform <strong>code analysis</strong> using codespaces and fix one of the code analysis errors. Select Problems, here you will find all the sonarlint code analysis errors listed.</p>
+</li>
+<li><p>Lets fix the errors under the <strong>HotelCouponConfigurerAdapter.java</strong> file. The error says that there are 2 import statements which aren't being used and thus should be removed. Thus remove the 2 unused import statements from the file and you will see the error disappearing from the Problems tab.</p>
+<p><img src="../../media/code_analysis_fix.gif" alt="Code analysis scan and fix"></p>
+</li>
+</ol>
+<h2 id="exercise-3-run-unit-tests">Exercise 3: Run unit tests</h2>
+<hr>
+<p>To complete this exercise, you will run the already written unit tests for the coupons application on codespaces.</p>
+<h3 id="prerequisites---exercise-3">Prerequisites - Exercise 3</h3>
+<hr>
+<ul>
+<li>Exercise 2 must be completed with at least one code analysis errors fixed.</li>
+<li>Codespaces beta has been subscribed to and enabled for user account.</li>
+</ul>
+<hr>
+<ol>
+<li><p>Since we have made code changes, our next step should be pushing these changes onto our branch and eventually ensure its merged with main branch. But before pushing our changes onto our branch which we created earlier, we need to ensure our code changes didn't break anything, and thus all unit tests should run success.</p>
+</li>
+<li><p>To run unit tests, on left menu, select Tests tab. Select the <code>sh360-coupons &gt; com.example.fabrikam.HotelCoupon.UnitTest &gt; Run</code>. This will run all the 7 unit tests that have been written for this application.</p>
+</li>
+<li><p>Once the test runs, the results can be found at the bottom bar of codespaces. Select that, and you should all 7 unit tests as passed, this is an assurance that our code changes didn't break anything and everything is still working as expected.</p>
+<p><img src="../../media/run_local_unit_test.gif" alt="Running unit tests locally"></p>
+</li>
+<li><p>To see how the unit tests can help you to catch regression early in the development process we will need to create one on purpose to see how the unit tests fail. Open <code>src/main/java/com/example/fabrikam/HotelCoupon/data/Coupon.java</code>
+replace  <code>this.title = title;</code> by <code>this.title = &quot; &quot;;</code> on line 41</p>
+<p>run the Unit tests again as you did in step 2 <code>sh360-coupons &gt; com.example.fabrikam.HotelCoupon.UnitTest &gt; Run</code>.</p>
+<p>you will notice that some of the tests now are red, which means they helped you detect the regression.</p>
+<p><img src="../../media/create_regression_and_check_unit_tests_results.gif" alt="create regression to see it on unit tests results"></p>
+<p>Now revert you last change (or replace line 41 <code>this.title = &quot; &quot;;</code> by <code>this.title = title;</code>) and run the tests again to ensure everything is green.</p>
+</li>
+</ol>
+<h2 id="exercise-4-commit-and-push-changes">Exercise 4: Commit and Push changes</h2>
+<hr>
+<p>To complete this exercise, you will stage, commit and push the changes that you made in the previous exercises.</p>
+<h3 id="prerequisites---exercise-4">Prerequisites - Exercise 4</h3>
+<hr>
+<ul>
+<li>Exercise 3 must be completed and all unit tests must pass.</li>
+<li>Codespaces beta has been subscribed to and enabled for user account.</li>
+</ul>
+<hr>
+<ol>
+<li><p>Now, lets commit and push our changes into the local branch we created. Please note, we should <strong>never commit the file application.properties</strong>, since this contains secrets which should not be exposed, and are only required to run the application locally.</p>
+</li>
+<li><p>Select the branch tab from left menu, here you wil find a list of files which have been modified locally. Stage only the changes in HotelCouponConfigurerAdapter.java file. Enter an appropriate commit message and select commit. Then push these changes onto the branch by clicking on the push icon next to the branch name at bottom of codespaces.</p>
+<p><img src="../../media/commit_push_changes.gif" alt="Commit and Push changes"></p>
+</li>
+</ol>
+<h1 id="key-takeaways"><strong>Key Takeaways</strong></h1>
+<hr>
+<ul>
+<li>GitHub codespaces can be used as any other IDE with advantages of being able to use it right from your browser anytime and anywhere.</li>
+<li>GitHub codespaces can be used to make code changes, run and test application.</li>
+</ul>
+<hr>
+<h2 id="whats-next-">What's Next ?</h2>
+<hr>
+<p><a href="module2.html">Module 2 - Configure Build Pipeline</a></p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="w-100 py-2">
+          <div class="container my-2">
+              <div class="hacker white"></div>
+              <div class="hacker orange"></div>
+              <div class="hacker green"></div>
+              <div class="hacker black"></div>
+              <div class="dojo-teams hidden-xs hidden-sm"></div>
+          </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <script type="text/javascript">
+    !function(T,l,y){var S=T.location,u="script",k="instrumentationKey",D="ingestionendpoint",C="disableExceptionTracking",E="ai.device.",I="toLowerCase",b="crossOrigin",w="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"4",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[I](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,p,l,u;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][I]()]=i[1])}if(!e[D]){var r=e.endpointsuffix,o=r?e.location:null;e[D]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[k]||d[k]||"",p=s[D],l=p?p+"/v2/track":config.endpointUrl,(u=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=l,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),u.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,l)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:w,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(w,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(u,l))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(u);n.src=h;var e=y[b];return!e&&""!==e||"undefined"==n[b]||(n[b]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(u)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[C]&&!0!==s[C]){method="onerror",t(["_"+method]);var c=T[method];T[method]=function(e,t,n,a,i){var r=c&&c(e,t,n,a,i);return!0!==r&&m["_"+method]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);(T[t]=n).queue&&0===n.queue.length&&n.trackPageView({})}(window,document,{
+    src: "https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",
+    cfg: {
+        instrumentationKey: "b0b411e6-3e51-4578-b762-608bb183d4a6"
+    }});
+    var telemetryInitializer = (envelope) => {
+      envelope.data.someField = 'This item passed through my telemetry initializer';
+    };
+    appInsights.addTelemetryInitializer(telemetryInitializer);
+    appInsights.trackTrace({message: 'This message will use a telemetry initializer'});
+    var id = null;
+    fetch('/.auth/me').then(function(response){
+      return response.json();
+    }).then(function(data){
+      id = data[0].user_id;
+      appInsights.setAuthenticatedUserContext(id);
+    });
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Module 2: Configure Build Pipeline | DevOps Dojo </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Module 2: Configure Build Pipeline | DevOps Dojo ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../../../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../../../toc.html">
+  
+  
+  
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../../../index.html">
+                <div class="msft-logo"></div>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p><strong><a href="../index.html">Home</a> | <a href="module1.html">Module 1</a> | <a href="module2.html">Module 2</a> | <a href="module3.html">Module 3</a> | <a href="module4.html">Module 4</a> |</strong></p>
+<h1 id="module-2-configure-build-pipeline"><strong>Module 2: Configure Build Pipeline</strong></h1>
+<hr>
+<p>For Continuous Integration, the [Bookings-CI-Base] workflow is the build pipeline responsible for building the SH360 bookings app, running Unit Tests and publishing artifacts in the end to be consumed by the release pipeline [Bookings-CD-Base].
+This module will provide an understanding of how the build CI pipeline is configured and various actions involved in the same.</p>
+<h2 id="exercise-1-understand-and-configure-the-build-pipeline">Exercise 1: Understand and configure the build pipeline</h2>
+<hr>
+<p>To complete this exercise, you will configure a build pipeline using variables to run tests and create an artifact that can be deployed.</p>
+<h3 id="prerequisites---exercise-1">Prerequisites - Exercise 1</h3>
+<hr>
+<ul>
+<li>CI Module 1 must be completed and the same branch created in module 1 is supposed to be used in this module.</li>
+<li>Codespaces beta has been subscribed to and enabled for user account. You can sign-up for the Beta version <a href="https://github.com/features/codespaces/signup">here</a>.</li>
+</ul>
+<hr>
+<ol>
+<li><p>Before starting, check that org-details variable group has the right values. Navigate to <code>.github &gt; variables &gt; org-details.json</code> and verify the values are correct.</p>
+</li>
+<li><p>All the workflows can be found under the folder <code>.github &gt; workflows</code>. Open the CI workflow file <strong>bookings-ci-base.yml</strong>.</p>
+</li>
+<li><p>A workflow file, starts with defining its name, which in our case is <strong>Bookings-CI-Base</strong>. Next is the triggers section called <strong>on</strong>, this section is responsible for listing down all the different ways this workflow is triggered. We have defined 3 ways here:</p>
+<ul>
+<li><p><strong>Push</strong>: This trigger ensures that whenever a new update is pushed in particular branches this build workflow must run. We have specified just the main branch, thus only when the main branch has some updates pushed the build pipeline is expected to run.</p>
+</li>
+<li><p><strong>Pull Request</strong>: This trigger ensures that whenever a PR is raised against a particular branch, the build pipeline is run as a verification run. We have specified just the main branch, thus only when a PR is raised against the main branch, the build pipeline is expected to run.</p>
+</li>
+<li><p><strong>Workflow Dispatch</strong>: This option is used for manually triggering the workflow.</p>
+</li>
+</ul>
+</li>
+<li><p>Uncomment the <strong>push and pull request section</strong> in the triggers, to let the workflow trigger automatically on a push or PR to the main branch.</p>
+</li>
+<li><p>Moving on, next section of a workflow is <strong>jobs</strong>. There can be <em>n</em> number of jobs inside a workflow, and each job can have <em>n</em> number of actions within it to perform various tasks. Each job runs on a particular agent and this is specified using the option <strong>runs-on</strong>. GitHub by default has <a href="https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners">GitHub hosted agents</a> with various operating systems like windows, ubuntu, macos. You can also make use of self-hosted agents. In our case for the Bookings-CI-Base, we have just one job which utilizes the <strong>windows-latest</strong> agent.</p>
+</li>
+<li><p>Inside the <strong>jobs</strong> section, there are multiple actions defined under the <strong>steps</strong> section.</p>
+</li>
+<li><p>The first action <strong>Checkout Repository</strong> is responsible for cloning the code into the agent upon which actions will be performed. The next action, <strong>Microsoft Teams Deploy Card</strong> is responsible for posting workflow status onto the teams channel that we explained in the <a href="../../../continuous-collaboration/cc-lab-instructions/module1.md#exercise-2-github-action---workflow-status">Continuous-Collaboration</a> section. Remove the <code>if: ${{ false }}</code> from this action to enable it. Similar to this action there are a lot of available actions in <a href="https://github.com/marketplace?type=actions">GitHub Marketplace</a> which are open source and can be easily integrated into any workflow.</p>
+</li>
+<li><p>Next actions <strong>Set Environment Variables - Organizational Details</strong> and <strong>Set Environment Variables - Booking All Stage</strong> are used to set variable groups that this workflow makes use of during the run. These variable groups are defined under the folder <code>.github &gt; variables</code>. Since GitHub currently doesn't have a concept of variable groups, we created this custom action to make use of variable groups in workflows.</p>
+</li>
+<li><p>Next action <strong>Setup NuGet</strong> not specifying a particular version, we will be configuring the latest version available. After that we restore, update and build the bookings application in the following actions <strong>Nuget Restore</strong>, <strong>Nuget Update</strong>, <strong>Setup MSBuild</strong> and <strong>Build Solution</strong>.</p>
+</li>
+<li><p>Similar to how we ran the unit tests locally, we also configure the <strong>Run Unit Test</strong> action in pipeline to ensure that the application code doesn't break anything. Remove the <code>if: ${{ false }}</code> from this action to enable it.</p>
+</li>
+<li><p>The next 2 actions are responsible for publishing the build artifacts so that it can be consumed by the CD workflow.</p>
+</li>
+<li><p>The last action <strong>Trigger - Release to dev</strong>, is responsible for triggering the CD workflow to the dev environment after the CI build is successful. This triggers the CD workflow with the workflow-dispatch action. Replace the <code>${{ false }}</code> with <code>github.event_name != 'pull_request'</code> to enable this action.</p>
+<p><img src="../../media/ci_bookings_workflow_changes.gif" alt="CI Workflow changes"></p>
+</li>
+<li><p>Thus we are successfully able to configure the build workflow. We will run this workflow in <a href="module4.html">CI-Module 4</a>.</p>
+</li>
+<li><p>Let's stage, commit and push the CI workflow changes onto the same branch that we created in Module 1. Refer <a href="module1.html#exercise-4-Commit-and-Push-changes">CI-Module 1-Exercise 4</a> to follow the steps to push the workflow changes onto the local branch.</p>
+</li>
+</ol>
+<h1 id="key-takeaways"><strong>Key Takeaways</strong></h1>
+<hr>
+<ul>
+<li>GitHub workflows can be used to build and test the application on any agent, which is very important to ensure Continuous Integration capability of DevOps.</li>
+<li>GitHub Marketplace contains a variety of open source actions which can be easily integrated into workflows.</li>
+</ul>
+<hr>
+<h2 id="whats-next-">What's Next ?</h2>
+<hr>
+<p><a href="module3.html">Module 3 - Static Code Analysis</a></p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="w-100 py-2">
+          <div class="container my-2">
+              <div class="hacker white"></div>
+              <div class="hacker orange"></div>
+              <div class="hacker green"></div>
+              <div class="hacker black"></div>
+              <div class="dojo-teams hidden-xs hidden-sm"></div>
+          </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/main.js"></script>
+  </body>
+</html>

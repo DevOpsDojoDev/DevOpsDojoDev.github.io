@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <script type="text/javascript">
+    !function(T,l,y){var S=T.location,u="script",k="instrumentationKey",D="ingestionendpoint",C="disableExceptionTracking",E="ai.device.",I="toLowerCase",b="crossOrigin",w="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"4",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[I](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,p,l,u;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][I]()]=i[1])}if(!e[D]){var r=e.endpointsuffix,o=r?e.location:null;e[D]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[k]||d[k]||"",p=s[D],l=p?p+"/v2/track":config.endpointUrl,(u=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=l,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),u.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,l)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:w,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(w,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(u,l))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(u);n.src=h;var e=y[b];return!e&&""!==e||"undefined"==n[b]||(n[b]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(u)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[C]&&!0!==s[C]){method="onerror",t(["_"+method]);var c=T[method];T[method]=function(e,t,n,a,i){var r=c&&c(e,t,n,a,i);return!0!==r&&m["_"+method]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);(T[t]=n).queue&&0===n.queue.length&&n.trackPageView({})}(window,document,{
+    src: "https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",
+    cfg: {
+        instrumentationKey: "b0b411e6-3e51-4578-b762-608bb183d4a6"
+    }});
+    var telemetryInitializer = (envelope) => {
+      envelope.data.someField = 'This item passed through my telemetry initializer';
+    };
+    appInsights.addTelemetryInitializer(telemetryInitializer);
+    appInsights.trackTrace({message: 'This message will use a telemetry initializer'});
+    var id = null;
+    fetch('/.auth/me').then(function(response){
+      return response.json();
+    }).then(function(data){
+      id = data[0].user_id;
+      appInsights.setAuthenticatedUserContext(id);
+    });
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Module 1: Implementing Continuous Quality | DevOps Dojo </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Module 1: Implementing Continuous Quality | DevOps Dojo ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../../../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../../../toc.html">
+  
+  
+  
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../../../index.html">
+                <div class="msft-logo"></div>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p><strong><a href="index.html">Home</a> | <a href="module1.html">Module 1</a> |</strong></p>
+<h1 id="module-1-implementing-continuous-quality"><strong>Module 1: Implementing Continuous Quality</strong></h1>
+<hr>
+<p>In this module we will update the continuous delivery workflow of our team to enable BDD and UI tests during the deployment cycle for the QA environment. Also, in order to sync any GitHub issue created as part of any test with our Azure Boards, changes in the <code>gh-issue-sync.yml</code> file will be made.</p>
+<h2 id="exercise-1-continuous-quality-strategy">Exercise 1: Continuous Quality Strategy</h2>
+<hr>
+<p>As part of any development cycle, before any deployment in the production environment, it is necessary to apply <strong>unit and integration tests</strong> to ensure that the code quality is the required. Unit tests were applied as part of the <a href="../../../continuous-integration/index.html">Continuous Integration lab</a>, in the continuous integration workflow. In this lab we will see how to apply different integration tests in the continuous delivery workflow.</p>
+<p>In the following exercises, we will modify two pipelines, <code>gh-issue-sync</code> and <code>continuous-delivery</code>. In the latter, we will enable two new jobs, where Behavior Driven Development (BDD) tests and User Interface (UI) tests will be executed. In addition, we will enable some steps to generate an issue in the repository if any error has occurred during the execution of any of these tests. The format of these issues can be seen in the <code>/.github/issues/</code> directory.</p>
+<p><img src="../../media/BDD_issue.png" alt="GitHub issue"></p>
+<p>However, as we have already seen in the Continuous Planning lab, our main tool for work planning and sprint management is Azure Boards. Therefore, it is necessary to synchronize these GitHub issues with ADO. To do this, we will enable the <code>gh-issue-sync</code> action. This is responsible for generating a Bug in ADO every time an issue is created in the repository. In addition, the status of ADO work item will update when the status of the issue from GitHub is changed.</p>
+<p><img src="../../media/ADO_bug.png" alt="ADO bug"></p>
+<h2 id="exercise-2-workflow-changes">Exercise 2: Workflow Changes</h2>
+<hr>
+<p>To complete this exercise, you will edit the <code>gh-issue-sync</code> and <code>environment-template</code> workflows using GitHub Codespaces.</p>
+<h3 id="prerequisites---exercise-2">Prerequisites - Exercise 2</h3>
+<hr>
+<ul>
+<li>CQ Module 1 - Exercise 1 must be completed.</li>
+<li>Codespaces beta has been subscribed to and enabled for user account.</li>
+</ul>
+<hr>
+<ol>
+<li><p>Open your <strong>GitHub Codespaces</strong> for coupons repository based on your team.</p>
+</li>
+<li><p>Create a new branch from main using <code>user/{user_id}/{purpose}</code> type of schema.</p>
+</li>
+<li><p>Open the <code>/.github/workflows/gh-issue-sync.yml</code> file.</p>
+</li>
+<li><p>Replace the ${{ false }} with always() to enable the action that syncs GitHub issues every time there is an opened, edited, deleted, closed or reopened issue in the repository. Save the changes.</p>
+<p><img src="../../media/issue_workflow_changes.gif" alt="GitHub Issue workflow changes"></p>
+</li>
+<li><p>Open the <code>/.github/workflows/environment-template.yml</code> file. Search for <code>BDD_UI_Tests</code> job. Uncomment that block to enable the BDD and UI Automated Test Stage. You can use shortcut <code>Ctrl + k + u</code> to uncomment and <code>Ctrl + k + c</code> to comment out a block of code.</p>
+</li>
+<li><p>Now open the <code>.github/actions/continuous-quality/action.yml</code> file. This is the composite action that includes the set-up and execution of the BDD and UI tests. See how, as part of the action, we are first creating the Teams card for continuously collaborate.</p>
+</li>
+<li><p>Finally, at the end of the composite action, you can find two steps that create the ADO Bug for the BDD failure or UI test failure. Note the if condition that ensures the execution only in the failure case.</p>
+<pre><code class="lang-yaml">    - name: Create ADO Bug on Failure for UI Tests
+    uses: JasonEtco/create-an-issue@v2
+    if: steps.uitests.outcome == 'failure'
+    env:
+        GITHUB_TOKEN: ${{ secrets.PAT }} 
+    with:
+        filename: .github/issues/ui-issue-template.md
+        update_existing: true
+</code></pre>
+</li>
+<li><p>Commit your changes and create a Pull Request. After merging the changes, see how the CI and continuous delivery workflows were triggered, and take a look at the QA environment logs.</p>
+<p><img src="../../media/create_pull_request.gif" alt="Create PR"></p>
+</li>
+</ol>
+<h2 id="exercise-3-run-workflow">Exercise 3: Run workflow</h2>
+<hr>
+<h3 id="prerequisites---exercise-3">Prerequisites - Exercise 3</h3>
+<hr>
+<ul>
+<li>CQ Module 1 - Exercises 1 and 2 must be completed.</li>
+</ul>
+<hr>
+<p>As explained before, the implemented tests will run only in the QA environment. Thus, those specific stages will be skipped when running <code>dev</code> or <code>prd</code> environments. The following picture shows how a successful execution looks like.</p>
+<p><img src="../../media/workflow_from_branch2.png" alt="Successful execution"></p>
+<p>You can manually run this workflow to better understand how each environment works.</p>
+<p>By default, no issues should be created if following the steps in the right order. However, if you want to see how the issue is created when one the BDD or UI tests fail, then go to the composite action and comment out the if statement of either the <code>Create ADO Bug on Failure for BDD Tests</code> or the <code>Create ADO Bug on Failure for UI Tests</code> actions. The if statement ensures that an issue is only created when the <code>Run BDD_Automated_Tests</code> or <code>Run UI_Tests</code> actions fail respectively. Commit your changes in a new branch of your choice.</p>
+<pre><code class="lang-yaml">    - name: Create ADO Bug on Failure for UI Tests
+    uses: JasonEtco/create-an-issue@v2
+    #if: steps.uitests.outcome == 'failure'
+    env:
+        GITHUB_TOKEN: ${{ secrets.PAT }} 
+    with:
+        filename: .github/issues/ui-issue-template.md
+        update_existing: true
+</code></pre>
+<p>Now execute the workflow from that branch and check the results.Once it finishes, go to the ADO environment, and find a new work item (bug) created as a replica of that issue.</p>
+<p><img src="../../media/issue_creation.gif" alt="Issue Creation"></p>
+<h1 id="key-takeaways"><strong>Key Takeaways</strong></h1>
+<hr>
+<ul>
+<li>Enabling shift left testing using Test Driven Development for quality code and detect bugs earlier.</li>
+<li>Custom templates can be defined to create your own GitHub issues.</li>
+<li>GitHub marketplace actions can be used to integrate and sync ADO boards and GitHub repository issues.</li>
+</ul>
+<hr>
+<h2 id="whats-next-">What's Next ?</h2>
+<hr>
+<p><a href="../../../continuous-security/index.html">Continuous Security</a></p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="w-100 py-2">
+          <div class="container my-2">
+              <div class="hacker white"></div>
+              <div class="hacker orange"></div>
+              <div class="hacker green"></div>
+              <div class="hacker black"></div>
+              <div class="dojo-teams hidden-xs hidden-sm"></div>
+          </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/main.js"></script>
+  </body>
+</html>

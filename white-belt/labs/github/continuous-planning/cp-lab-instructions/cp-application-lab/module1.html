@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <script type="text/javascript">
+    !function(T,l,y){var S=T.location,u="script",k="instrumentationKey",D="ingestionendpoint",C="disableExceptionTracking",E="ai.device.",I="toLowerCase",b="crossOrigin",w="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"4",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[I](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,p,l,u;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][I]()]=i[1])}if(!e[D]){var r=e.endpointsuffix,o=r?e.location:null;e[D]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[k]||d[k]||"",p=s[D],l=p?p+"/v2/track":config.endpointUrl,(u=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=l,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),u.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,l)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:w,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(w,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(u,l))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(u);n.src=h;var e=y[b];return!e&&""!==e||"undefined"==n[b]||(n[b]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(u)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[C]&&!0!==s[C]){method="onerror",t(["_"+method]);var c=T[method];T[method]=function(e,t,n,a,i){var r=c&&c(e,t,n,a,i);return!0!==r&&m["_"+method]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);(T[t]=n).queue&&0===n.queue.length&&n.trackPageView({})}(window,document,{
+    src: "https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",
+    cfg: {
+        instrumentationKey: "b0b411e6-3e51-4578-b762-608bb183d4a6"
+    }});
+    var telemetryInitializer = (envelope) => {
+      envelope.data.someField = 'This item passed through my telemetry initializer';
+    };
+    appInsights.addTelemetryInitializer(telemetryInitializer);
+    appInsights.trackTrace({message: 'This message will use a telemetry initializer'});
+    var id = null;
+    fetch('/.auth/me').then(function(response){
+      return response.json();
+    }).then(function(data){
+      id = data[0].user_id;
+      appInsights.setAuthenticatedUserContext(id);
+    });
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Module 1: Discuss and capture Backlog | DevOps Dojo </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Module 1: Discuss and capture Backlog | DevOps Dojo ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../../../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../../../toc.html">
+  
+  
+  
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../../../index.html">
+                <div class="msft-logo"></div>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p><strong><a href="index.html">Home</a> | <a href="module1.html">Module 1</a> | <a href="module2.html">Module 2</a> |</strong></p>
+<h1 id="module-1-discuss-and-capture-backlog"><strong>Module 1: Discuss and capture Backlog</strong></h1>
+<hr>
+<p>This module will provide an understanding of how OKRs translate to a Backlog, what format should a User Story have, what is the Acceptance criteria and finally, how to estimate and breakdown tasks. The main goals are:</p>
+<ol>
+<li>Come to consensus on the definition of <strong>Epic, Feature, and User Story (EFUs)</strong> and how it aligns with <strong>Objectives and Key Results (OKRs)</strong></li>
+<li>Establish understanding of what a &quot;good&quot; User Story is using the <strong>INVEST framework</strong></li>
+<li>Practice writing &quot;good&quot; <strong>Acceptance Criteria</strong></li>
+<li>Establish understanding of how <strong>Estimates, Targets, and Commitments</strong> align</li>
+<li>Practice <strong>Refinement</strong> from <strong>Agile</strong> ceremonies</li>
+<li>(Stretch Goal) Establish understanding of how to initiate a development sprint with a <strong>Sprint Commitment and Task Breakdown</strong></li>
+</ol>
+<h3 id="prerequisites---module-1">Prerequisites - Module 1</h3>
+<hr>
+<ol>
+<li><strong>Divide</strong> the teams into separate breakouts</li>
+<li><strong>Present</strong> the POV slide titled &quot;CEO's OKRs in Diagram&quot;</li>
+<li>Coaches will guide the team in one of two (hopefully both) directions:
+<ul>
+<li><strong>Elucidating backlog items</strong> from Objectives and Key Results</li>
+<li><strong>Executing Backlog Refinement</strong> and Sprint Planning ceremonies</li>
+</ul>
+</li>
+</ol>
+<h2 id="exercise-1--translating-objectives-and-key-results-into-epics-features-and-user-stories">Exercise 1:  Translating Objectives and Key Results into Epics, Features, and User Stories</h2>
+<hr>
+<p>After this exercise, class participants will have an understanding of how to <strong>translate business objectives into actionable development work</strong> that can be prioritized using <em>feasibility, desirability, and viability</em>.</p>
+<ol>
+<li><p>Reiterate the <strong>Mission and Vision</strong> from the Role Play exercise.</p>
+</li>
+<li><p>Decide for the class that they will focus on the &quot;<em>Grow our business</em>&quot; objective and its KRs.</p>
+</li>
+<li><p>Reiterate that SmartHotel360 can provide the <strong>outcomes needed to achieve Key Results</strong>.</p>
+</li>
+<li><p>Start <strong>group discussion</strong> on how to encourage users to make more online coupons.</p>
+<ul>
+<li>Some teams will come up with a lot of ideas such as loyalty programs, B2B programs, etc. It's the coaches job to decide if a team is mature enough to pursue their own initiatives while maintaining the option to corral the discussion in the direction of the prescribed Lab scope.</li>
+</ul>
+</li>
+<li><p><strong>Guide</strong> the class into <strong>translating</strong> these <em>business ideas into releasable Features</em>.</p>
+</li>
+<li><p><strong>Guide</strong> the class into <strong>grouping</strong> those <em>Features into Epics</em>.</p>
+</li>
+<li><p>Move onto the <a href="#User-Story-Format">User Story Format</a> exercise</p>
+</li>
+</ol>
+<h3 id="user-story-format">User Story Format</h3>
+<hr>
+<p>After this exercise, class participants will <strong>understand</strong> the <strong>format of a User Story</strong>, how to write a User Story guided by the &quot;<em>INVEST</em>&quot; principles, and how to <strong>identify Acceptance Criteria</strong>.</p>
+<p>You have the option to <strong>guide the class</strong>, and provide structure around a single Feature, &quot;Add Discounts to Reservations from the hotel's website&quot;, from a &quot;Entice Customers&quot; Epic.</p>
+<ol>
+<li><p>Divide the team into <strong>two groups</strong>. One group will represent the <strong>Hotel Guest</strong> persona, the other will assume the <strong>Hotel Owner</strong> persona.</p>
+</li>
+<li><p><em>(5 minute team exercise)</em> Each group will discuss one or two User Stories that align with the <strong>Redeem Coupons feature</strong>. They need to:</p>
+<ul>
+<li><p>On the whiteboard, write out the <strong>INVEST guidelines</strong>:</p>
+<ul>
+<li>“I” ndependent (of all others)</li>
+<li>“N” egotiable (not a specific contract for features)</li>
+<li>“V” aluable (or <a href="http://guide.agilealliance.org/guide/incremental.html">http://guide.agilealliance.org/guide/incremental.html</a>)</li>
+<li>“E” stimable (to a good approximation)</li>
+<li>“S” mall (so as to fit within an iteration)</li>
+<li>“T” estable (in principle, even if there isn’t a test for it yet)</li>
+</ul>
+</li>
+<li><p>On the whiteboard, write out the <strong>User Story in the correct format</strong></p>
+</li>
+<li><p>On the whiteboard, provide a <strong>Description for that story</strong> that <strong>describes</strong> the <strong>business value</strong> that needs to be delivered from that story.</p>
+</li>
+</ul>
+</li>
+<li><p>Each group <strong>shares</strong> their <strong>User Story and Description</strong> and elicits feedback from the class.</p>
+</li>
+<li><p>Each group will <strong>discuss and document</strong> the <strong>Acceptance Criteria</strong> for their Story(s)</p>
+<ul>
+<li>On the whiteboard, describe the Acceptance Criteria in a bulleted list. (Remember that Acceptance Criteria should help the team test for business value and completeness!)</li>
+</ul>
+</li>
+<li><p>Each group <strong>shares</strong> their <strong>Acceptance Criteria</strong> and elicits feedback from the group.</p>
+</li>
+</ol>
+<p>Some good User Story examples that follow the <em>&quot;As a <strong>Persona</strong>, I want to <strong>Action</strong>, so that <strong>Value</strong>&quot;</em> guidance and their acceptance criteria.</p>
+<p>The below example follow this pattern:</p>
+<p><em><strong>Persona</strong></em></p>
+<ul>
+<li><em>User Story</em>
+<ul>
+<li><em>Acceptance Criteria</em></li>
+</ul>
+</li>
+</ul>
+<p><strong>Hotel Guest</strong></p>
+<ul>
+<li>As a Hotel Guest, I want to use the hotel's website to redeem coupon codes I received in an e-mail promo
+<ul>
+<li>From the reservation management page of the hotel's website users should be able to apply a coupon code to their existing reservation.</li>
+</ul>
+</li>
+<li>As a Hotel Guest, I want to add a coupon code to my cart so that I can save money on booking
+<ul>
+<li>From the e-shopping cart, in the Billing portion of the form, users should be able to apply a coupon code and see the updated price reflected in the shopping cart.</li>
+</ul>
+</li>
+<li>As a Hotel Guest, I want to use the hotel's website to redeem coupon codes I received in an e-mail promo
+<ul>
+<li>Users can only submit valid, non-expired, Coupon Codes</li>
+<li>Users can only submit a single Coupon Code per reservation</li>
+<li>The booking price should be automatically updated when a Coupon Code is applied</li>
+<li>The redeemed coupon code should be always visible on the reservation page after it has been applied</li>
+</ul>
+</li>
+</ul>
+<p><strong>Hotel Owner</strong></p>
+<ul>
+<li>As a Hotel Owner, I want to provide customers with coupon codes so that I can attract new customers
+<ul>
+<li>From the reservation management screen, I should be able to apply a discount to a customer's existing reservation in a dollar amount or percentage.</li>
+</ul>
+</li>
+<li>As a Hotel Owner, I want to provide discounts to customers' reservations so that I can retain and delight loyal customers
+<ul>
+<li>From the management dashboard, provide an e-mail address, discount amount, and a unique discount code, and be able to press a single button to send to a single, or list, of email addresses.</li>
+</ul>
+</li>
+<li>As a Hotel Owner, I want to provide discounts to customers' reservations so that I can retain and delight loyal customers
+<ul>
+<li>Hotel Owners can only apply valid, non-expired, Coupon Codes</li>
+<li>Hotel Owners may apply more than one Coupon Code</li>
+<li>Hotel Owners may choose to provide a simple dollar amount discount in whole dollars and cents ($###.##)</li>
+<li>Hotel Owners may choose to provide no more than a 50% discount on any existing reservation</li>
+<li>The booking price in the existing reservation should be automatically updated when a discount is applied</li>
+</ul>
+</li>
+</ul>
+<h3 id="estimation">Estimation</h3>
+<hr>
+<p>If you need to, you can guide the class to shape the discussion around a single User Story - <strong>&quot;As a Hotel Owner, I want to provide discounts to customers' reservations so that I can retain and delight loyal customers</strong>, from the Feature - &quot;Add Discounts to Reservations from the hotel's website&quot;.</p>
+<ul>
+<li><strong>Perform Planning Poker</strong> on the User Story &quot;As a Hotel Owner, I want to provide discounts to customers' reservations so that I can retain and delight loyal customers&quot;</li>
+<li><strong>Perform Task Breakdown</strong> of the User Story &quot;As a Hotel Owner, I want to provide discounts to customers' reservations so that I can retain and delight loyal customers&quot;</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Be sure to explicitly explain the difference in estimation around <strong>complexity for User Story Points</strong> and <strong>hours remaining for Tasks</strong>.</p>
+</div>
+<h1 id="key-takeaways"><strong>Key Takeaways</strong></h1>
+<hr>
+<ul>
+<li>User Story Crafting Whiteboard Exercise</li>
+</ul>
+<hr>
+<h2 id="whats-next-">What's Next ?</h2>
+<hr>
+<p><a href="module2.html">Module 2 - View Backlog Items in Azure</a></p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="w-100 py-2">
+          <div class="container my-2">
+              <div class="hacker white"></div>
+              <div class="hacker orange"></div>
+              <div class="hacker green"></div>
+              <div class="hacker black"></div>
+              <div class="dojo-teams hidden-xs hidden-sm"></div>
+          </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/main.js"></script>
+  </body>
+</html>

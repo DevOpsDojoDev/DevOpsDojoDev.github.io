@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <script type="text/javascript">
+    !function(T,l,y){var S=T.location,u="script",k="instrumentationKey",D="ingestionendpoint",C="disableExceptionTracking",E="ai.device.",I="toLowerCase",b="crossOrigin",w="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"4",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[I](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,p,l,u;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][I]()]=i[1])}if(!e[D]){var r=e.endpointsuffix,o=r?e.location:null;e[D]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[k]||d[k]||"",p=s[D],l=p?p+"/v2/track":config.endpointUrl,(u=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=l,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),u.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,l)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:w,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(w,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(u,l))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(u);n.src=h;var e=y[b];return!e&&""!==e||"undefined"==n[b]||(n[b]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(u)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[C]&&!0!==s[C]){method="onerror",t(["_"+method]);var c=T[method];T[method]=function(e,t,n,a,i){var r=c&&c(e,t,n,a,i);return!0!==r&&m["_"+method]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);(T[t]=n).queue&&0===n.queue.length&&n.trackPageView({})}(window,document,{
+    src: "https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",
+    cfg: {
+        instrumentationKey: "b0b411e6-3e51-4578-b762-608bb183d4a6"
+    }});
+    var telemetryInitializer = (envelope) => {
+      envelope.data.someField = 'This item passed through my telemetry initializer';
+    };
+    appInsights.addTelemetryInitializer(telemetryInitializer);
+    appInsights.trackTrace({message: 'This message will use a telemetry initializer'});
+    var id = null;
+    fetch('/.auth/me').then(function(response){
+      return response.json();
+    }).then(function(data){
+      id = data[0].user_id;
+      appInsights.setAuthenticatedUserContext(id);
+    });
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting Started | DevOps Dojo </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting Started | DevOps Dojo ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+  
+  
+  
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../index.html">
+                <div class="msft-logo"></div>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started">Getting Started</h1>
+
+<h2 id="welcome-to-make-github-real">Welcome to Make GitHub Real</h2>
+<iframe width="640" height="360" src="https://msit.microsoftstream.com/embed/video/12e10840-98dc-ae70-8134-f1ec16f259f0?autoplay=false&showinfo=true" allowfullscreen="" style="border:none;"></iframe>
+<p>This lab aims to demonstrate how to apply DevOps in an environment based on GitHub technology. In the following exercises we will be dealing with different capabilities such as Continuous Planning, Continuous Integration and Continuous Delivery, among others, making use of features available by GitHub, all of this following this <a href="index.html#GitHub-Reference-Implementation-by-Capabilities">reference architecture</a>.</p>
+<p>This guide will walk you through the steps you need to take to provision an environment for use with the Make GitHub Real labs.</p>
+<p>Before you follow this guide, you will need to be aware of the following prerequisites.</p>
+<ul>
+<li><strong>GitHub account</strong>, you can create a <a href="https://github.com/join">GitHub account</a> for free, if you don't already have one.</li>
+<li><strong>Microsoft Team</strong>, we will integrate with Microsoft Teams to push messages into channels based on events in GitHub, therefore we <em>recommend</em> that you create a new Microsoft Team for use with this class.</li>
+<li><strong>Azure DevOps organization</strong>, although the labs are primarily aimed at using GitHub, this class also uses Azure Boards &amp; Azure Pipelines integration. You can <a href="https://azure.microsoft.com/en-gb/services/devops/">create an Azure DevOps organization</a> for free.</li>
+<li><strong>Azure Subscription</strong>, resources will be provisioned in Azure by GitHub Actions to demonstrate Continous Deployment, therefore an active Azure subscription that you permissions to create resources in is required. You can <a href="https://azure.microsoft.com/en-gb/free/">create an Azure account</a> for free.</li>
+<li><strong>Azure CLI</strong>, to provision resources in your Azure subscription, a service principal is required to authenticate. We will use the Azure CLI to create this principal. See the <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli">How to install Azure CLI</a> guide.</li>
+</ul>
+<p>## Configure prerequisites</p>
+<p>In this section, we will ensure that you have the prerequisites configured correctly to ensure that when your request an environment using the DevOps Dojo Self Service Power App, it provisions successfully.</p>
+<h3 id="create-a-github-account">Create a GitHub account</h3>
+<p>In case you don't have a GitHub account yet, please follow <a href="https://github.com/join">this link</a> and create one. You can create it under your employee email or your personal email. If you choose to create it with your personal email, please follow the next section to learn how to <a href="getting-started.html#Link-your-GitHub-account-to-your-corporate-identity">link your GitHub account to your corporate identity</a>. If you are already using your corporate account go directly to <a href="getting-started.html#Join-Microsoft-DevOps-Dojo-organization">Join Microsoft DevOps Dojo organization</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you are not familiar to GitHub yet, we encourage you to follow the <a href="https://lab.github.com/githubtraining/introduction-to-github">Introduction to GitHub</a> GitHub Lab.</p>
+</div>
+<h3 id="link-your-github-account-to-your-corporate-identity">Link your GitHub account to your corporate identity</h3>
+<p>You will first need to ensure that you have <a href="https://repos.opensource.microsoft.com/link">linked your GitHub account</a> to your corporate Microsoft identity which will grant you the ability to join any GitHub corporate organization.</p>
+<p><img src="../media/github_create_link.png" alt="GitHub Create Link"></p>
+<h3 id="join-microsoft-devops-dojo-organization">Join Microsoft DevOps Dojo organization</h3>
+<p>Once you have successfully linked your GitHub account to your corporate identity you will then need to request to <a href="https://repos.opensource.microsoft.com/orgs/microsoftdevopsdojo/join">join the Microsoft DevOps Dojo</a> organization. If you face any issues in this step, please reach <a href="mailto:askdevopsdojo@microsoft.com">Contact Us</a> mentioning your GitHub username.</p>
+<p>### Configure Incoming Webhook in Microsoft Teams</p>
+<p>To receive messages from GitHub into Microsoft Teams, we will need to <a href="https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook#create-incoming-webhook-1">create an Incoming Webhook</a> in a channel in your team.</p>
+<p>Once you have configured the Incoming Webhook, make a note of the webhook URL, you will need to provide this when you make your request in the DevOps Dojo Self Service Power App.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We recommend creating the webhook in the General channel, however if you want to create another channel to receive messages into, that is also fine.
+In case you are creating environment for the masterclass, then create a webhook in Bookings/ Coupons team channel</p>
+</div>
+<p><img src="../media/teams_create_webhook.gif" alt="Create Teams Webhook"></p>
+<h3 id="generate-azure-devops-personal-access-token">Generate Azure DevOps personal access token</h3>
+<p>To ensure that we can provision resources in your Azure DevOps organization on your behalf, we will need to authenticate, and for that we will need a Personal Access Token (PAT).</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&amp;tabs=preview-page#create-a-pat">Generate a PAT</a> in your Azure DevOps organization, with the following scopes.</p>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Permission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Work Items</td>
+<td>Read, Write &amp; Manage</td>
+</tr>
+<tr>
+<td>Project and Team</td>
+<td>Read, Write &amp; Manage</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The <em>Project and Team</em> scope is hidden by default, click <em>Show all scopes</em> to expand the list of available scopes</p>
+</div>
+<p>When you're done, make sure to copy the token. For your security, it won't be shown again. You will need to provide this when you make your request in the DevOps Dojo Self Service Power App.</p>
+<h3 id="generate-github-personal-access-token">Generate GitHub personal access token</h3>
+<p>To ensure that we can provision resources in GitHub on your behalf, we will need to authenticate, and for that we will need a Personal Access Token (PAT). Personal access tokens are intended to access GitHub resources on behalf of yourself. In GitHub, there are two types of personal access tokens. You can read more about them <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#types-of-personal-access-tokens">here</a>. For this exercise, we will generate a <strong>classic</strong> PAT.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can read more about how to keep your personal access tokens secure following <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#keeping-your-personal-access-tokens-secure">this link</a>.</p>
+</div>
+<p><a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">Generate a PAT</a> in GitHub, with the following scopes.</p>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Permission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>repo</td>
+<td>Full control of private repositories</td>
+</tr>
+<tr>
+<td>workflow</td>
+<td>Update GitHub Action workflows</td>
+</tr>
+<tr>
+<td>admin:repo_hook</td>
+<td>Full control of repository hooks</td>
+</tr>
+<tr>
+<td>notifications</td>
+<td>Access notifications</td>
+</tr>
+</tbody>
+</table>
+<p>When you're done, make sure to copy the token. For your security, it won't be shown again. You will need to provide this when you make your request in the DevOps Dojo Self Service Power App.</p>
+<p>In addition to generating the token, we also need to <a href="https://docs.github.com/en/github/authenticating-to-github/authenticating-with-saml-single-sign-on/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on">authorize it for use with SAML single sign on (SSO)</a> to successfully provision resources in the Microsoft DevOps Dojo organisation.</p>
+<p><img src="../media/github_pat_sso.png" alt="GitHub PAT SSO enabled"></p>
+<h3 id="generate-azure-service-principal">Generate Azure service principal</h3>
+<p>To ensure that we can provision resources in Azure, we will need to authenticate, and for that we will need to generate a service principal and grant it <code>Contributor</code> access to your Azure subscription.</p>
+<p>First <a href="https://docs.microsoft.com/en-us/cli/azure/authenticate-azure-cli">sign in with Azure CLI</a> executing the <code>az login</code> command, this will start an interactive login session opening your default web browser.</p>
+<p>To create the service principal, execute:</p>
+<pre><code class="lang-sh">az ad sp create-for-rbac --name &quot;mgr-labs-&lt;&lt;username&gt;&gt;&quot; --role &quot;Contributor&quot; --output &quot;json&quot; --scopes /subscriptions/&lt;subscriptionId&gt;
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The service principal will be granted contributor role against the default subscription, use <code>--scopes=&quot;/subscriptions/&lt;SUBSCRIPTION_ID&gt;&quot;</code> to specify a specific subscription</p>
+</div>
+<p>The below output will be returned when the service principal has been created.</p>
+<pre><code class="lang-json">{
+  &quot;appId&quot;: &quot;&lt;client_id&gt;&quot;,
+  &quot;displayName&quot;: &quot;mgr-labs&quot;,
+  &quot;name&quot;: &quot;http://mgr-labs&quot;,
+  &quot;password&quot;: &quot;&lt;client_secret&gt;&quot;,
+  &quot;tenant&quot;: &quot;&lt;tenant_id&gt;&quot;
+}
+</code></pre>
+<p>To obtain the Object ID of the service principal, execute:</p>
+<pre><code class="lang-sh">az ad sp list --display-name &quot;mgr-labs&quot; --query &quot;[].id&quot; --output tsv
+</code></pre>
+<p>When you're done, make sure to copy both of the outputs, you will need to provide this when you make your request in the DevOps Dojo Self Service Power App.</p>
+<h2 id="request-your-environment">Request your environment</h2>
+<p>Now that you have all the required prerequisites configured, you can now <strong><a href="https://apps.powerapps.com/play/e/527989ee-8680-47ba-97ff-69f7c95be407/a/bce9594f-9dde-45b5-a138-77db274b6501?tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;source=portal">request</a></strong> your environment using the DevOps Dojo Self Service Power App.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For any of the workflows and environments, if the run fails, try re-running it again for that specific environment. In case the workflow fails at UI Tests, don't worry about it, this happens because the application takes some time to be up and running.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The secrets collected during the provisioning process, are safely stored and processed using Azure KeyVault, and are maintained only until the provisioning. On completion, your secrets are deleted and are no longer maintained by us.</p>
+</div>
+<p>Once the repository has been successfully created and you have received your confirmation email, please follow these steps to create the initial infrasutrcture in Azure:</p>
+<ol>
+<li><p>Go to <code>Actions -&gt; Continuous Integration -&gt; Run workflow -&gt; mgr-bootstrap</code></p>
+<p><img src="../media/coupons-ci-workflow.png" alt="Run Continuous Integration"></p>
+</li>
+<li><p>Once the workflow successfully finishes, follow the same steps with the <code>Continuous Delivery</code> workflow.</p>
+</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The repositories created in the Microsoft DevOps Dojo GitHub organization will automatically expire after fifteen days, this should be an appropriate amount of time to complete the labs, however if you require longer, you can request a seven day extension. Once the expiry date has been reached the GitHub repositories will be automatically deleted.</p>
+</div>
+<p>Congratulations, you have successfully provisioned your environment and you can now begin working on the labs. Enjoy! 🎉</p>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="w-100 py-2">
+          <div class="container my-2">
+              <div class="hacker white"></div>
+              <div class="hacker orange"></div>
+              <div class="hacker green"></div>
+              <div class="hacker black"></div>
+              <div class="dojo-teams hidden-xs hidden-sm"></div>
+          </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
